@@ -15,7 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('review/create', 'Admin\ReviewController@add');
+    Route::post('review/create', 'Admin\ReviewController@create');
+});
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
