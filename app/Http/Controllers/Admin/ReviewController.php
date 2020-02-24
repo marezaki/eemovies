@@ -12,4 +12,9 @@ class ReviewController extends Controller
       return view('admin.review.create');
   }
 
+  public function create()
+    {
+        return redirect('admin/review/create');
+    }
+
 }
