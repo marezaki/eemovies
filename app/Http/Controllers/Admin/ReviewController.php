@@ -17,4 +17,20 @@ class ReviewController extends Controller
         return redirect('admin/review/create');
     }
 
+  public function delete()
+  {
+      return redirect('admin/mypage');
+  }
+
+  public function index()
+    {
+        return view('admin.review.index');
+    }
+
+  public function status()
+  {
+      return redirect('admin/review/status');
+  }
+
+
 }

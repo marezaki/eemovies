@@ -7,18 +7,19 @@ use App\Http\Controllers\Controller;
 
 class ProfileController extends Controller
 {
-    public function create()
-    {
-        return redirect('admin/profile/create');
-    }
-
     public function edit()
     {
-        return view('admin.profile.edit');
+        return view('admin.mypage.edit');
     }
 
     public function update()
     {
-        return redirect('admin/profile/edit');
+        return redirect('admin/mypage/edit');
+    }
+
+    public function index()
+    {
+        
+        return view('admin.mypage.index');
     }
 }
