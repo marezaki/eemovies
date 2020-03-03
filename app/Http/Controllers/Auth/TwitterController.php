@@ -15,7 +15,8 @@ class TwitterController extends Controller
 
     // ログイン
     public function redirectToProvider(){
-        return Socialite::driver('twitter')->redirect();
+        $user = Socialite::driver('twitter')->redirect();
+        return $user;
     }
 
     // コールバック
@@ -39,7 +40,7 @@ class TwitterController extends Controller
     // ログアウト
     public function logout(Request $request)
     {
-        
+
         Auth::logout();
         return redirect('/');
     }
