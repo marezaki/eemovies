@@ -20,10 +20,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('review', 'Admin\ReviewController@index');
 
     Route::get('movie/create', 'Admin\MovieController@add');
-    Route::get('movie/create', 'Admin\MovieController@create');
+    Route::post('movie/create', 'Admin\MovieController@create');
     Route::get('movie/edit', 'Admin\MovieController@edit');
-    // Route::get('movie/delete', 'Admin\MovieController@delete');
-    // Route::get('movie/update', 'Admin\MovieController@update');
+    Route::post('movie/edit', 'Admin\MovieController@update');
+    Route::get('movie/delete', 'Admin\MovieController@delete');
     Route::get('movie/index', 'Admin\MovieController@index');
 });
 

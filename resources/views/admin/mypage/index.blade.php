@@ -12,6 +12,8 @@
         <div class="col-md-8 mx-auto">
             <h2>マイページ</h2>
             <form action="{{ action('Admin\ProfileController@index') }}" method="get" enctype="multipart/form-data">
+                
+                
                 {{-- マイページの編集ボタン --}}
                 <button type="button" onclick="location.href='./mypage/edit'">編集</button>
                 {{-- 画像の表示 --}}
