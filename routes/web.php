@@ -28,8 +28,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 });
 
 // ユーザーサイド　のちにAPI認証した場合のみ見られるようにする
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('user/login', 'Auth\TwitterController@add');
+Route::group(['prefix' => 'user'], function() {
+    Route::get('login', 'Auth\TwitterController@add');
     
     Route::get('review/create', 'Admin\ReviewController@add');
     Route::post('review/create', 'Admin\ReviewController@create');

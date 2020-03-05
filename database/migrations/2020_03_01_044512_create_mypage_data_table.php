@@ -15,7 +15,7 @@ class CreateMypageDataTable extends Migration
     {
         Schema::create('mypage_data', function (Blueprint $table) {
             $table->string('image_path');
-            $table->string('name');
+            $table->string('name');//idで引っ張ってくる
             $table->timestamps();
         });
     }
