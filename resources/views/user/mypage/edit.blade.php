@@ -1,5 +1,5 @@
 {{-- マイページの編集画面 --}}
-@extends('layouts.admin')
+@extends('layouts.user')
 
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}

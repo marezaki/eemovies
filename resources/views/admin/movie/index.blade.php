@@ -41,8 +41,8 @@
                             @foreach($posts as $movies)
                                 <tr>
                                     <th>{{ $movies->id }}</th>
-                                    <td>{{ \Str::limit($movies->title) }}</td>
-                                    <td>{{ \Str::limit($movies->director) }}</td>
+                                    <td>{{ str_limit($movies->title) }}</td>
+                                    <td>{{ str_limit($movies->director) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\MovieController@edit', ['id' => $movies->id]) }}">編集</a>

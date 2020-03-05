@@ -95,14 +95,14 @@ class MovieController extends Controller
             $posts = movieData::all();
         }
 
-        return view('admin.movie.show', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('user.movie.show', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function status(Request $request)
     {
         $items = movieData::find($request->id);
         
-        return view('admin.movie.status', ['items' => $items]);
+        return view('user.movie.status', ['items' => $items]);
     }
   
 }

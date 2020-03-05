@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 @section('title', '作品一覧')
 
 @section('content')
@@ -15,9 +15,9 @@
                              <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                          </div>
                          <div class="col-md-2">
-                             {{ csrf_field() }}
-                             <input type="submit" class="btn btn-primary" value="検索">
-                         </div>
+                            {{ csrf_field() }}
+                            <input type="submit" class="btn btn-primary" value="検索">
+                        </div>
                     </div>
                 </form>
             </div>
@@ -29,19 +29,15 @@
                     <table class="table table-dark">
                         <thead>
                             <tr>
-                                <th width="10%">ID</th>
                                 <th width="50%">タイトル</th>
-                                <th width="40%">監督</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($posts as $movies)
                                 <tr>
-                                    <th>{{ $movies->id }}</th>
                                     <td>
-                                        <a href="{{ action('Admin\MovieController@status', ['id' => $movies->id]) }}">{{ \Str::limit($movies->title) }}</a>
+                                        <a href="{{ action('Admin\MovieController@status', ['id' => $movies->id]) }}">{{ str_limit($movies->title, 100) }}</a>
                                     </td>
-                                    <td>{{ \Str::limit($movies->director) }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

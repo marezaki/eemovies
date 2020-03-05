@@ -9,17 +9,17 @@ class ReviewController extends Controller
 {
     public function add()
   {
-      return view('admin.review.create');
+      return view('user.review.create');
   }
 
   public function create()
     {
-        return redirect('admin/review/create');
+        return redirect('user/review/create');
     }
 
   public function delete()
   {
-      return redirect('admin/mypage');
+      return redirect('user/mypage');
   }
 
   public function index()
@@ -29,7 +29,7 @@ class ReviewController extends Controller
 
   public function status()
   {
-      return redirect('admin/review/status');
+      return redirect('user/review/status');
   }
 
 

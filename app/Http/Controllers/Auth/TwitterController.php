@@ -11,7 +11,7 @@ class TwitterController extends Controller
     
     public function add()
     {
-        return view('admin.twitter.login');
+        return view('user.twitter.login');
     }
 
     // ログイン

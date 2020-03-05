@@ -17,19 +17,19 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="title">タイトル</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="title" value="{{ $movies_form->title }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="director">監督</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="director" value="{{ old('director') }}">
+                            <input type="text" class="form-control" name="director" value="{{ $movies_form->director }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="actor">キャスト</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="actor" value="{{ old('actor') }}">
+                            <input type="text" class="form-control" name="actor" value="{{ $movies_form->actor }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -49,25 +49,25 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="description">説明文</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="description" rows="20">{{ old('description') }}</textarea>
+                            <textarea class="form-control" name="description" rows="20">{{ $movies_form->description }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="year">公開年</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="year" value="{{ old('year') }}">
+                            <input type="text" class="form-control" name="year" value="{{ $movies_form->year }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="type">ジャンル</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="type" value="{{ old('type') }}">
+                            <input type="text" class="form-control" name="type" value="{{ $movies_form->type }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="country">製作国</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="country" value="{{ old('country') }}">
+                            <input type="text" class="form-control" name="country" value="{{ $movies_form->country }}">
                         </div>
                     </div>
                     <div class="form-group row">
