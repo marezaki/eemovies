@@ -15,7 +15,11 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
+            //ユーザーidがはいる
+            //映画のidを引っ張ってくる
             $table->string('title', 20);
+            
+
             $table->string('body', 300);
             $table->timestamps();
         });

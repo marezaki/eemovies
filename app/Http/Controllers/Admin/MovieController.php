@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\movieData;
+use DebugBar\DebugBar;
 
 class MovieController extends Controller
 {
@@ -58,6 +59,7 @@ class MovieController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, movieData::$rules);
+
         $movies = movieData::find($request->id);
         $movies_form = $request->all();
         if (isset($movies_form['image'])) {
@@ -84,14 +86,23 @@ class MovieController extends Controller
         return redirect('admin/movie/index');
     }
 
-    public function show()
+    public function show(Request $request)
     {
-        return view('admin.movie.show');
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            $posts = movieData::where('title', $cond_title)->get();
+        } else {
+            $posts = movieData::all();
+        }
+
+        return view('admin.movie.show', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
-    public function status()
+    public function status(Request $request)
     {
-        return view('admin.movie.status');
+        $items = movieData::find($request->id);
+        
+        return view('admin.movie.status', ['items' => $items]);
     }
   
 }
