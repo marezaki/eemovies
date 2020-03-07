@@ -21,6 +21,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            //Twitter用に追加
+            $table->string('twitter_id')->unique()->nullable();
+            $table->string('avatar')->nullable();
+            $table->string('nickname')->nullable();
         });
     }
 

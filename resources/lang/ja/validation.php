@@ -155,8 +155,13 @@ return [
         'type' => 'ジャンル',
         'country' => '製作国',
         'body' => '本文',
-        'emotion' => '感情評価',
         'total' => '総合評価',
+        // 'happy' => '喜',
+        // 'excited' => '楽',
+        // 'funny' => '笑',
+        // 'sad' => '悲',
+        // 'disguesting' => '怒',
+        // 'scary' => '怖',
     ],
 
 ];

@@ -37,6 +37,7 @@ Route::group(['prefix' => 'user'], function() {
     // Route::get('review/delete', 'Admin\ReviewController@delete');
     // Route::get('review/status', 'Admin\ReviewController@status');
     
+    
     Route::get('mypage', 'Admin\ProfileController@index');
     Route::get('mypage/myreview', 'Admin\ProfileController@show');
     Route::get('mypage/edit', 'Admin\ProfileController@edit');
@@ -48,7 +49,7 @@ Route::group(['prefix' => 'user'], function() {
 });
 
 // ログインURL
-Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider');
+Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
 // // コールバックURL
 Route::get('auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback');
 // // ログアウトURL
@@ -58,5 +59,3 @@ Route::get('auth/twitter/logout', 'Auth\TwitterController@logout');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-

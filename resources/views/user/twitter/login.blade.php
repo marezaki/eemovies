@@ -10,10 +10,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>Twitterで登録！</h2>
+                <h2>EE | MOVIES</h2>
+                <p>Emotional Evaluation.</p>
+                <p>感情でわかる評価</p>
                 <form action="{{ action('Auth\TwitterController@add') }}" method="get" enctype="multipart/form-data">
-                    <a href="/auth/twitter">ログインする</a>
-                    {{-- <a href="/auth/twitter/logout">ログアウト</a> --}}
+                    <a href="/auth/twitter">Twitterでログイン / 登録</a>
                 
                 </form>
             </div>

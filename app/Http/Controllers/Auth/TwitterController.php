@@ -1,51 +1,55 @@
 <?php
-
+ 
 namespace App\Http\Controllers\Auth;
-use Illuminate\Http\Request;
+ 
 use App\Http\Controllers\Controller;
+use Auth;
 use Socialite;
-use Illuminate\Support\Facades\Auth;
-use App\userData;
-
+use App\User;
+ 
 class TwitterController extends Controller
 {
-    
-    public function add()
-    {
+    protected $redirectPath = '/home';
+
+    public function add() {
         return view('user.twitter.login');
     }
 
-    // ログイン
-    public function redirectToProvider()
-    {
-        $user = Socialite::driver('twitter')->redirect();
-        return $user;
+    public function redirectToProvider(){
+        return Socialite::driver('twitter')->redirect();
     }
-    
-    // コールバック
-    public function handleProviderCallback(Request $request)
-    {
+
+    public function handleProviderCallback(){
         try {
-            $twitterUser = Socialite::driver('twitter')->user();
+            $user = Socialite::driver('twitter')->user();
         } catch (Exception $e) {
             return redirect('auth/twitter');
         }
-        $user = userData::where('auth_id', $twitterUser->id)->first();
-        if (!$user) {
-            $user = userData::create([
-                'auth_id' => $twitterUser->id
-                ]);
-        }
-        Auth::login($user);
-        return redirect('/');
+
+        $authUser = $this->findOrCreateUser($user);
+        Auth::login($authUser, true);
+        return redirect('user/mypage');
     }
 
-    // ログアウト
-    public function logout(Request $request)
-    {
+    private function findOrCreateUser($twitterUser){
+        $authUser = User::where('twitter_id', $twitterUser->id)->first();
+        if ($authUser){
+            return $authUser;
+        }
 
+        return User::create([
+
+            'name' => $twitterUser->name,
+            'nickname' => $twitterUser->nickname,
+            'twitter_id' => $twitterUser->id,
+            'avatar' => $twitterUser->avatar_original
+        ]);
+    }
+    
+    public function logout()
+    {
         Auth::logout();
         return redirect('user/login');
     }
-
 }
+    

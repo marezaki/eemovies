@@ -11,7 +11,5 @@ class reviewData extends Model
     public static $rules = array(
         'title' => 'required',
         'total' => 'required',
-        'emotion' => 'required',
-        'body' => 'required',
     );
 }

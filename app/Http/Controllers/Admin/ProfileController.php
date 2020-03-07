@@ -17,9 +17,8 @@ class ProfileController extends Controller
         return redirect('user/mypage/edit');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        
         return view('user.mypage.index');
     }
 }
