@@ -41,11 +41,14 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-
+                            <a href="{{ action('Admin\MovieController@add') }}">作品の追加</a>
+                            <a href="{{ action('Admin\MovieController@index') }}">作品の一覧</a>
+                            <a href="{{ action('Admin\ReviewController@index') }}">投稿の一覧</a>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
+                            
                         </ul>
                     </div>
                 </div>

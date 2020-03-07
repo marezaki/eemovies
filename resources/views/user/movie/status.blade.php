@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2" for="image_path">イメージ</label>
-                    <img src="{{ $items->image_path }}" width=200 height=200>
+                    <img src="{{ asset('storage/image/'.$items->image_path )}}" width=600 height=400>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2" for="director">監督</label>
@@ -42,6 +42,7 @@
                     {{ $items->country }}
                 </div>
             </form>
+            <a href="{{ action('Admin\ReviewController@add', ['id' => $items->id])}}">{{ $items->title }}を評価する</a>
         </div>
     </div>
 @endsection

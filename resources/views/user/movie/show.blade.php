@@ -36,7 +36,7 @@
                             @foreach($posts as $movies)
                                 <tr>
                                     <td>
-                                        <a href="{{ action('Admin\MovieController@status', ['id' => $movies->id]) }}">{{ str_limit($movies->title, 100) }}</a>
+                                        <a href="{{ action('Admin\MovieController@status', ['id' => $movies->id]) }}">{{ $movies->title }}</a>
                                     </td>
                                 </tr>
                             @endforeach

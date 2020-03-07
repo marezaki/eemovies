@@ -4,17 +4,21 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Review;
+use App\reviewData;
 
 class ReviewController extends Controller
 {
     public function add()
   {
-      return view('user.review.create');
-  }
+    return view('user.review.create');
+  } 
 
-  public function create()
+  public function create(Request $request)
     {
-        return redirect('user/review/create');
+      $this->validate($request, reviewData::$rules);
+
+      return redirect('user/review/create');
     }
 
   public function delete()
@@ -26,6 +30,11 @@ class ReviewController extends Controller
     {
         return view('admin.review.index');
     }
+
+  public function show()
+  {
+      return view('user.review.show');
+  }
 
   public function status()
   {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Socialite;
+use Illuminate\Support\Facades\Auth;
 use App\userData;
 
 class TwitterController extends Controller
@@ -22,23 +23,21 @@ class TwitterController extends Controller
     }
     
     // コールバック
-    public function handleProviderCallback()
+    public function handleProviderCallback(Request $request)
     {
         try {
             $twitterUser = Socialite::driver('twitter')->user();
         } catch (Exception $e) {
             return redirect('auth/twitter');
         }
-        
-        $user = User::where('auth_id', $twitterUser->id)->first();
+        $user = userData::where('auth_id', $twitterUser->id)->first();
         if (!$user) {
-            $user = User::create([
+            $user = userData::create([
                 'auth_id' => $twitterUser->id
                 ]);
         }
         Auth::login($user);
         return redirect('/');
-        //userDataに保存するコードを書く
     }
 
     // ログアウト
@@ -46,7 +45,7 @@ class TwitterController extends Controller
     {
 
         Auth::logout();
-        return redirect('/');
+        return redirect('user/login');
     }
 
 }

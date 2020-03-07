@@ -15,8 +15,7 @@
                 
                 
                 {{-- マイページの編集ボタン --}}
-                <button type="button" onclick="location.href='./mypage/edit'">編集</button>
-                {{-- 画像の表示 --}}
+                <a href="{{ action('Admin\ProfileController@edit') }}">編集</a>
                 <img src="#">
                 {{-- 名前の表示 --}}
                 

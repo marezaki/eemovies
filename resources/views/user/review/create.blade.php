@@ -19,13 +19,6 @@
                         @endforeach
                     </ul>
                     @endif
-                    
-                    {{-- 映画を選択 --}}
-                    {{-- 評価する映画の検索覧 --}}
-                    
-                    <div class="form-group row">
-                        <label class="col-md-2">評価する作品</label>
-                    </div>
 
                     {{-- 投稿のタイトル --}}
                     <div class="form-group row">
@@ -35,17 +28,64 @@
                         </div>
                     </div>
                     
-                    {{--  評価　AからEまでの表示　--}}
+                    {{--  感情指数　--}}
                     <div class="form-group row">
-                        <label class="col-md-2">総合評価</label>
+                        <label class="col-md-2">感情指数</label>
+
+                            <p>喜</p>
+                            <select name="emotion">
+                                @for($i=0;$i<=10;$i++)
+                                    <option value='{{ $i }}' name="happy">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            <p>楽</p>
+                            <select name="emotion">
+                                @for($i=0;$i<=10;$i++)
+                                    <option value='{{ $i }}' name="excited">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            <p>笑</p>
+                            <select name="emotion">
+                                @for($i=0;$i<=10;$i++)
+                                    <option value='{{ $i }}' name="funny">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            <p>悲</p>
+                            <select name="emotion">
+                                @for($i=0;$i<=10;$i++)
+                                    <option value='{{ $i }}' name="sad">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            <p>怒</p>
+                            <select name="emotion">
+                                @for($i=0;$i<=10;$i++)
+                                    <option value='{{ $i }}' name="disguested">{{ $i }}</option>
+                                @endfor
+                            </select>
+                            <p>怖</p>
+                            <select name="emotion">
+                                @for($i=0;$i<=10;$i++)
+                                    <option value='{{ $i }}' name="scary">{{ $i }}</option>
+                                @endfor
+                            </select>
                     </div>
                     
-                
-                    {{-- 感情評価 --}}
-                    {{-- グラフを表示 --}}
+                    {{-- 総合評価 --}}
                     <div class="form-group row">
-                        <label class="col-md-2">感情評価</label>
+                        <label class="col-md-2">総合評価</label>
+                        <select name="emotion">
+                        <option value=1>A</option>
+                        <option value=2>B</option>
+                        <option value=3>C</option>
+                        <option value=4>D</option>
+                        <option value=5>E</option>
+                        </select>
+                        <p>「E」が最も良い評価になります！</p>
                     </div>
+
+                    {{-- グラフを表示 --}}
+
+                    
 
                     {{-- 本文 --}}
                     <div class="form-group row">

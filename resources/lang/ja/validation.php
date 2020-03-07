@@ -153,7 +153,10 @@ return [
         'description' => '説明文',
         'year' => '公開年',
         'type' => 'ジャンル',
-        'country' => '製作国'
+        'country' => '製作国',
+        'body' => '本文',
+        'emotion' => '感情評価',
+        'total' => '総合評価',
     ],
 
 ];
