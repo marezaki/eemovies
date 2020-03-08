@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-md-8">
-                <form action="{{ action('Admin\MovieController@show') }}" method="get">
+                <form action="{{ action('User\MovieController@index') }}" method="get">
                     <div class="form-group row">
                         <label class="col-md-2">タイトル</label>
                          <div class="col-md-8">
@@ -36,7 +36,7 @@
                             @foreach($posts as $movies)
                                 <tr>
                                     <td>
-                                        <a href="{{ action('Admin\MovieController@status', ['id' => $movies->id]) }}">{{ $movies->title }}</a>
+                                        <a href="{{ action('User\MovieController@status', ['id' => $movies->id]) }}">{{ $movies->title }}</a>
                                     </td>
                                 </tr>
                             @endforeach

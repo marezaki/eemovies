@@ -85,23 +85,5 @@ class MovieController extends Controller
         return redirect('admin/movie/index');
     }
 
-    public function show(Request $request)
-    {
-        $cond_title = $request->cond_title;
-        if ($cond_title != '') {
-            $posts = movieData::where('title', $cond_title)->get();
-        } else {
-            $posts = movieData::all();
-        }
-
-        return view('user.movie.show', ['posts' => $posts, 'cond_title' => $cond_title]);
-    }
-
-    public function status(Request $request)
-    {
-        $items = movieData::find($request->id);
-        
-        return view('user.movie.status', ['items' => $items]);
-    }
   
 }

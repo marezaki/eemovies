@@ -8,7 +8,7 @@
         </div>
 
         <div class="row">
-            <form action="{{ action('Admin\MovieController@status') }}">
+            <form action="{{ action('User\MovieController@status') }}">
                 <div class="form-group row">
                     <label class="col-md-2" for="title">タイトル</label>
                     {{ $items->title }}
@@ -42,7 +42,7 @@
                     {{ $items->country }}
                 </div>
             </form>
-            <a href="{{ action('Admin\ReviewController@add', ['id' => $items->id])}}">{{ $items->title }}を評価する</a>
+            <a href="{{ action('User\ReviewController@add', ['id' => $items->id])}}">{{ $items->title }}を評価する</a>
         </div>
     </div>
 @endsection

@@ -18,6 +18,8 @@ Route::get('/', function () {
 // 管理者サイド
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('review', 'Admin\ReviewController@index');
+    Route::get('review', 'Admin\ReviewController@delete');
+    Route::get('review', 'Admin\ReviewController@status');
 
     Route::get('movie/create', 'Admin\MovieController@add');
     Route::post('movie/create', 'Admin\MovieController@create');
@@ -27,27 +29,25 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('movie/index', 'Admin\MovieController@index');
 });
 
-// ユーザーサイド　のちにAPI認証した場合のみ見られるようにする
+// ユーザーサイド
 Route::group(['prefix' => 'user'], function() {
     Route::get('login', 'Auth\TwitterController@add');
     
-    Route::get('review/create', 'Admin\ReviewController@add');
-    Route::post('review/create', 'Admin\ReviewController@create');
-    Route::get('review', 'Admin\ReviewController@show');
-    // Route::get('review/delete', 'Admin\ReviewController@delete');
-    // Route::get('review/status', 'Admin\ReviewController@status');
+    Route::get('review/create', 'User\ReviewController@add');
+    Route::post('review/create', 'User\ReviewController@create');
+    Route::get('review', 'User\ReviewController@index');
+    Route::get('review/delete', 'User\ReviewController@delete');
+    Route::get('myreview', 'User\ReviewController@mine');
+    Route::get('review/status', 'User\ReviewController@status');
     
+    Route::get('mypage', 'User\UserController@index');
+    Route::get('about', 'User\UserController@about');
     
-    Route::get('mypage', 'Admin\ProfileController@index');
-    Route::get('mypage/myreview', 'Admin\ProfileController@show');
-    Route::get('mypage/edit', 'Admin\ProfileController@edit');
-    // Route::get('mypage/update', 'Admin\ProfileController@update');
-    Route::get('people/status', 'Admin\ProfileController@status');
-    
-    Route::get('movie', 'Admin\MovieController@show');
-    Route::get('movie/status', 'Admin\MovieController@status');
+    Route::get('movie', 'User\MovieController@index');
+    Route::get('movie/status', 'User\MovieController@status');
 });
 
+// Twitter API OAuth認証
 // ログインURL
 Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
 // // コールバックURL

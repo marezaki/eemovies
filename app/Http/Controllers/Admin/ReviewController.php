@@ -4,41 +4,26 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Review;
 use App\reviewData;
 
 class ReviewController extends Controller
 {
-    public function add()
-  {
-    return view('user.review.create');
-  } 
-
-  public function create(Request $request)
-    {
-      $this->validate($request, reviewData::$rules);
-
-      return redirect('user/review/create');
-    }
-
   public function delete()
   {
-      return redirect('user/mypage');
+    // 投稿の削除
+    return redirect('user/mypage');
   }
 
   public function index()
-    {
-        return view('admin.review.index');
-    }
-
-  public function show()
   {
-      return view('user.review.show');
+    // 管理者用のみんなの投稿一覧
+    return view('admin.review.index');
   }
 
   public function status()
   {
-      return redirect('user/review/status');
+    // 他人のレビュー詳細画面
+    return redirect('user/review/status');
   }
 
 

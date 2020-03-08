@@ -38,13 +38,15 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-                            <a href="{{ action('Admin\ProfileController@index') }}">マイページ</a>
-                            <a href="{{ action('Admin\ReviewController@show') }}">レビューを見る</a>
-                            <a href="{{ action('Admin\MovieController@show') }}">作品を探す</a>
+                            {{-- 投稿一覧画面にとぶeemoviesのロゴボタン --}}
+                            <a href="{{ action('User\UserController@about') }}">EE | MOVIESについて</a>
                         </ul>
-
+                        
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
+                            <a href="{{ action('User\UserController@index') }}">マイページ</a>
+                            <a href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
+                            <a href="{{ action('User\MovieController@index') }}">作品を探す</a>
                             <a href="{{ action('Auth\TwitterController@logout') }}">ログアウト</a>
                         </ul>
                     </div>
