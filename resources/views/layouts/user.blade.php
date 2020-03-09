@@ -24,7 +24,7 @@
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         {{-- この章の後半で作成するCSSを読み込みます --}}
-        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/user.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">
@@ -40,14 +40,34 @@
                         <ul class="navbar-nav mr-auto">
                             {{-- 投稿一覧画面にとぶeemoviesのロゴボタン --}}
                             <a href="{{ action('User\UserController@about') }}">EE | MOVIESについて</a>
+                            <a href="{{ action('User\UserController@index') }}">マイページ</a>
+                            <a href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
+                            <a href="{{ action('User\MovieController@index') }}">作品を探す</a>
                         </ul>
                         
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
-                            <a href="{{ action('User\UserController@index') }}">マイページ</a>
-                            <a href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
-                            <a href="{{ action('User\MovieController@index') }}">作品を探す</a>
-                            <a href="{{ action('Auth\TwitterController@logout') }}">ログアウト</a>
+                            {{-- 以下を追記 --}}
+                        <!-- Authentication Links -->
+                        {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                        @guest
+                            <li><a class="nav-link" href="/auth/twitter">Twitterで登録 / ログイン</a></li>
+                            {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ action('Auth\TwitterController@logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+                                        <form id="logout-form" action="{{ action('Auth\TwitterController@logout') }}"　style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+
                         </ul>
                     </div>
                 </div>

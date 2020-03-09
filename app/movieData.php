@@ -17,4 +17,9 @@ class movieData extends Model
         'type' => 'required',
         'country' => 'required',
     );
+
+    public function movies()
+    {
+        return $this->hasMany('App\movieData');
+    }
 }

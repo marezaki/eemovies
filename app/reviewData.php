@@ -12,4 +12,8 @@ class reviewData extends Model
         'title' => 'required',
         'total' => 'required',
     );
+
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 }

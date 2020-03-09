@@ -49476,16 +49476,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/user.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/user.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*****************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ***!
-  \*****************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/user.scss ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/admin.scss */"./resources/sass/admin.scss");
+module.exports = __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/user.scss */"./resources/sass/user.scss");
 
 
 /***/ })

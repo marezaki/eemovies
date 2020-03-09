@@ -4,20 +4,33 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\movieData;
+use App\reviewData;
+use App\User;
 
 class ReviewController extends Controller
 {
-    public function add()
+    public function add(Request $request)
   {
     return view('user.review.create');
   } 
 
   public function create(Request $request)
   {
-    // 投稿の新規作成
-    $this->validate($request, reviewData::$rules);
-
-    return redirect('user/review/create');
+    $review = new reviewData;
+    $review->user_id = $request->user()->id;
+    $review->movie_id = $request->movie_id;
+    $review->title = $request->title;
+    $review->total = $request->total;
+    $review->happy = $request->happy;
+    $review->excited = $request->excited;
+    $review->funny = $request->funny;
+    $review->sad = $request->sad;
+    $review->disgusted = $request->disgusted;
+    $review->scary = $request->scary;
+    $review->body = $request->body;
+    $review->save();
+    return redirect('/user/mypage');
   }
 
   public function delete()

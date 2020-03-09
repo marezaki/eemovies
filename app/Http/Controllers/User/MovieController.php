@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\movieData;
+use App\User;
 
 class MovieController extends Controller
 {
@@ -17,13 +18,12 @@ class MovieController extends Controller
             $posts = movieData::all();
         }
 
-        return view('user.movie.show', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('user.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function status(Request $request)
     {
         $items = movieData::find($request->id);
-        
         return view('user.movie.status', ['items' => $items]);
     }
 }

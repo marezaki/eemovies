@@ -18,4 +18,10 @@ class UserController extends Controller
         // このサイトについての説明画面
         return view('user.mypage.about');
     }
+
+    // public function request(Request $request)
+    // {
+    //     // このサイトについての説明画面
+    //     return view('user.mypage.about');
+    // }
 }

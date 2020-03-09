@@ -17,9 +17,9 @@ Route::get('/', function () {
 
 // 管理者サイド
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('review', 'Admin\ReviewController@index');
-    Route::get('review', 'Admin\ReviewController@delete');
-    Route::get('review', 'Admin\ReviewController@status');
+    Route::get('review/index', 'Admin\ReviewController@index');
+    Route::get('review/delete', 'Admin\ReviewController@delete');
+    Route::get('review/status', 'Admin\ReviewController@status');
 
     Route::get('movie/create', 'Admin\MovieController@add');
     Route::post('movie/create', 'Admin\MovieController@create');
@@ -30,9 +30,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 });
 
 // ユーザーサイド
-Route::group(['prefix' => 'user'], function() {
-    Route::get('login', 'Auth\TwitterController@add');
-    
+Route::group(['prefix' => 'user'], function() {  
     Route::get('review/create', 'User\ReviewController@add');
     Route::post('review/create', 'User\ReviewController@create');
     Route::get('review', 'User\ReviewController@index');
@@ -42,6 +40,7 @@ Route::group(['prefix' => 'user'], function() {
     
     Route::get('mypage', 'User\UserController@index');
     Route::get('about', 'User\UserController@about');
+    // Route::get('request', 'User\UserController@request');
     
     Route::get('movie', 'User\MovieController@index');
     Route::get('movie/status', 'User\MovieController@status');
