@@ -17,6 +17,8 @@ class ReviewController extends Controller
 
   public function create(Request $request)
   {
+    $this->validate($request, reviewData::$rules);
+    
     $review = new reviewData;
     $review->user_id = $request->user()->id;
     $review->movie_id = $request->movie_id;
@@ -39,10 +41,16 @@ class ReviewController extends Controller
     return redirect('user/mypage');
   }
 
-  public function index()
+  public function index(Request $request)
   {
-    // みんなの投稿一覧画面
-    return view('user.review.index');
+    $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            $posts = reviewData::where('title', $cond_title)->get();
+        } else {
+            $posts = reviewData::all();
+        }
+
+    return view('user.review.index', ['posts' => $posts, 'cond_title' => $cond_title]);
   }
 
   public function mine()
@@ -51,9 +59,10 @@ class ReviewController extends Controller
     return view('user.review.mine');
   }
 
-  public function status()
+  public function status(Request $request)
   {
     // 他人のレビュー詳細画面
-    return redirect('user/review/status');
+    $review = reviewData::find($request->id);
+    return redirect('user/review/status', ['review' => $review]);
   }
 }

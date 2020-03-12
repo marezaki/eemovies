@@ -1,0 +1,11 @@
+.py-4 {
+  background-image: url("/storage/image/about/smiley-2979107_1920.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 640px;
+}
+
+.row-top {
+  margin-top: 200px;
+}
+

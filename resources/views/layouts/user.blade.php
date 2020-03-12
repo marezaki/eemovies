@@ -23,8 +23,13 @@
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ asset('css/user.css') }}" rel="stylesheet">
+
+        {{-- chart.jsの読み込み --}}
+        {{-- <script async="" src={{ asset("//www.google-analytics.com/analytics.js") }}></script> --}}
+        {{-- <script src={{ asset("../../../dist/2.9.3/Chart.min.js") }}></script> --}}
+        {{-- <script src={{ asset("../utils.js") }}></script> --}}
+
     </head>
     <body>
         <div id="app">
@@ -39,10 +44,10 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
                             {{-- 投稿一覧画面にとぶeemoviesのロゴボタン --}}
-                            <a href="{{ action('User\UserController@about') }}">EE | MOVIESについて</a>
-                            <a href="{{ action('User\UserController@index') }}">マイページ</a>
-                            <a href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
-                            <a href="{{ action('User\MovieController@index') }}">作品を探す</a>
+                            <a class="menu" href="{{ action('User\UserController@about') }}">EE | MOVIESについて</a>
+                            <a class="menu" href="{{ action('User\UserController@index') }}">マイページ</a>
+                            <a class="menu" href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
+                            <a class="menu" href="{{ action('User\MovieController@index') }}">作品を探す</a>
                         </ul>
                         
                         <!-- Right Side Of Navbar -->
@@ -78,6 +83,9 @@
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')
             </main>
+            <div class="footer">
+                <p>Copyright © 2020 EE | MOVIES All Rights Reserved.</p>
+            </div>
         </div>
     </body>
 </html>

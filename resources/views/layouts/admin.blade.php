@@ -23,7 +23,6 @@
         <!-- Styles -->
         {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     </head>
     <body>
@@ -41,9 +40,9 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-                            <a href="{{ action('Admin\MovieController@add') }}">作品の追加</a>
-                            <a href="{{ action('Admin\MovieController@index') }}">作品の一覧</a>
-                            <a href="{{ action('Admin\ReviewController@index') }}">投稿の一覧</a>
+                            <a class="menu"　href="{{ action('Admin\MovieController@add') }}">作品の追加</a>
+                            <a class="menu"　href="{{ action('Admin\MovieController@index') }}">作品の一覧</a>
+                            <a class="menu"　href="{{ action('Admin\ReviewController@index') }}">投稿の一覧</a>
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -59,6 +58,9 @@
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')
             </main>
+            <div class="footer">
+                <p>Copyright © 2020 EE | MOVIES All Rights Reserved.</p>
+            </div>
         </div>
     </body>
 </html>

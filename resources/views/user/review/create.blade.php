@@ -1,14 +1,11 @@
-{{-- レビュー新規投稿画面 --}}
 @extends('layouts.user')
+<link href="{{ asset('css/review.create.css') }}" rel="stylesheet">
 
-
-{{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
 @section('title', 'レビュー新規作成')
 
-{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row-top">
         <div class="col-md-8 mx-auto">
             <h2>レビュー新規作成</h2>
                 <form action="{{ action('User\ReviewController@create') }}" method="post" enctype="multipart/form-data">

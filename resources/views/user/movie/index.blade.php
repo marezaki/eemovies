@@ -1,16 +1,17 @@
 @extends('layouts.user')
+<link href="{{ asset('css/movie.css') }}" rel="stylesheet">
+
 @section('title', '作品一覧')
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <h2>作品一覧</h2>
+        <div class="row-top">
+            <h1>作品一覧</h1>
         </div>
         <div class="row">
             <div class="col-md-8">
                 <form action="{{ action('User\MovieController@index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">タイトル</label>
                          <div class="col-md-8">
                              <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                          </div>
@@ -26,17 +27,16 @@
         <div class="row">
             <div class="list-movies col-md-12 mx-auto">
                 <div class="row">
-                    <table class="table table-dark">
+                    <table class="table">
                         <thead>
-                            <tr>
-                                <th width="50%">タイトル</th>
-                            </tr>
+                            <p>評価する作品を選択してください</p>
                         </thead>
                         <tbody>
-                            @foreach($posts as $movies)
+                            @foreach($posts as $movie)
                                 <tr>
                                     <td>
-                                        <a href="{{ action('User\MovieController@status', ['id' => $movies->id]) }}">{{ $movies->title }}</a>
+                                        <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ asset('storage/image/'.$movie->image_path )}}" width=230 height=150></a>
+                                        <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}">{{ $movie->title }}</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -2,5 +2,11 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/admin.css": "/css/admin.css",
-    "/css/user.css": "/css/user.css"
+    "/css/user.css": "/css/user.css",
+    "/css/about.css": "/css/about.css",
+    "/css/review.css": "/css/review.css",
+    "/css/mypage.css": "/css/mypage.css",
+    "/css/movie.css": "/css/movie.css",
+    "/css/movie.status.css": "/css/movie.status.css",
+    "/css/review.create.css": "/css/review.create.css"
 }

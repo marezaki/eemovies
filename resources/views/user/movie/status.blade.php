@@ -1,9 +1,11 @@
 @extends('layouts.user')
+<link href="{{ asset('css/movie.status.css') }}" rel="stylesheet">
+
 @section('title', '作品詳細')
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row-top">
             <h2>作品詳細</h2>
         </div>
 
@@ -42,7 +44,7 @@
                     {{ $items->country }}
                 </div>
             </form>
-            <a href="{{ action('User\ReviewController@add', ['id' => $items->id])}}">{{ $items->title }}を評価する</a>
+            <p><a href="{{ action('User\ReviewController@add', ['id' => $items->id])}}">この作品を評価する</a></p>
         </div>
     </div>
 @endsection
