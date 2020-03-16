@@ -84,8 +84,16 @@
                         <label class="created-at">{{ $review->created_at }}</label>
                     </div>
                 </div>
-                
+
                 <a class="status" href="{{ action('User\MovieController@status', ['id' => $review->movie_id])}}">この作品の詳細を見る</a>
+                
+                @if ($review->user->id == $user_id) 
+                    <div class="form-group">
+                        <div class="delete">
+                            <a  class="delete-button" href="{{ action('User\ReviewController@delete', ['id' => $review->id]) }}">削除する</a>
+                        </div>
+                    </div>
+                @endif
             </form>
         </div>
     </div>
