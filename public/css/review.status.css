@@ -91,15 +91,34 @@ i {
 .status {
   display: inline-block;
   padding: 0 10px;
-  color: #d30000;
+  color: #d60000;
   font-size: 20px;
-  border-bottom: solid 2px #d30000;
+  border-bottom: solid 2px #d60000;
 }
 
 .status:hover {
   text-decoration: none;
-  color: rgba(211, 0, 0, 0.808);
-  border-bottom: solid 2px rgba(211, 0, 0, 0.808);
+  color: rgba(214, 0, 0, 0.801);
+  border-bottom: solid 2px rgba(214, 0, 0, 0.822);
+  transition: 0.5s;
+}
+
+.delete-button {
+  float: right;
+  text-align: center;
+  margin-top: 20px;
+  display: inline-block;
+  color: #d60000;
+  font-size: 1.2rem;
+  width: 7.5rem;
+  padding: 5 10px;
+  border: solid 3px #d60000;
+}
+
+.delete-button:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #d60000;
   transition: 0.5s;
 }
 

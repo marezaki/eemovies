@@ -88,16 +88,16 @@ select {
   font-size: 15px;
   margin-top: 30px;
   padding: 10 60px;
-  background-color: #d30000;
-  border-color: #d30000;
-  color: white;
+  border: solid 2px #d30000;
+  color: #d30000;
   border-radius: 5px;
 }
 
 .button:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
   text-decoration: none;
   transition: 0.3s;
+  background-color: #d30000;
 }
 
 span {
