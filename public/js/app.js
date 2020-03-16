@@ -49542,6 +49542,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/review.status.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/review.status.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/user.scss":
 /*!**********************************!*\
   !*** ./resources/sass/user.scss ***!
@@ -49554,9 +49565,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/user.scss ./resources/sass/about.scss ./resources/sass/review.scss ./resources/sass/mypage.scss ./resources/sass/movie.scss ./resources/sass/movie.status.scss ./resources/sass/review.create.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/user.scss ./resources/sass/about.scss ./resources/sass/review.scss ./resources/sass/mypage.scss ./resources/sass/movie.scss ./resources/sass/movie.status.scss ./resources/sass/review.create.scss ./resources/sass/review.status.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49569,7 +49580,8 @@ __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/mypage.scss */"./resources/sass/mypage.scss");
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/movie.scss */"./resources/sass/movie.scss");
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/movie.status.scss */"./resources/sass/movie.status.scss");
-module.exports = __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/review.create.scss */"./resources/sass/review.create.scss");
+__webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/review.create.scss */"./resources/sass/review.create.scss");
+module.exports = __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/review.status.scss */"./resources/sass/review.status.scss");
 
 
 /***/ })

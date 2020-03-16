@@ -4,22 +4,20 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\movieData;
-use App\reviewData;
-use App\User;
+use App\ReviewData;
 
 class ReviewController extends Controller
 {
-    public function add(Request $request)
+  public function add()
   {
     return view('user.review.create');
-  } 
+  }
 
   public function create(Request $request)
   {
-    $this->validate($request, reviewData::$rules);
-    
-    $review = new reviewData;
+    $this->validate($request, ReviewData::$rules);
+
+    $review = new ReviewData;
     $review->user_id = $request->user()->id;
     $review->movie_id = $request->movie_id;
     $review->title = $request->title;
@@ -31,6 +29,7 @@ class ReviewController extends Controller
     $review->disgusted = $request->disgusted;
     $review->scary = $request->scary;
     $review->body = $request->body;
+    $review->spoilers = $request->spoilers;
     $review->save();
     return redirect('/user/mypage');
   }
@@ -44,11 +43,11 @@ class ReviewController extends Controller
   public function index(Request $request)
   {
     $cond_title = $request->cond_title;
-        if ($cond_title != '') {
-            $posts = reviewData::where('title', $cond_title)->get();
-        } else {
-            $posts = reviewData::all();
-        }
+    if ($cond_title != '') {
+      $posts = ReviewData::where('title', $cond_title)->get();
+    } else {
+      $posts = ReviewData::all();
+    }
 
     return view('user.review.index', ['posts' => $posts, 'cond_title' => $cond_title]);
   }
@@ -62,7 +61,7 @@ class ReviewController extends Controller
   public function status(Request $request)
   {
     // 他人のレビュー詳細画面
-    $review = reviewData::find($request->id);
-    return redirect('user/review/status', ['review' => $review]);
+    $review = ReviewData::find($request->id);
+    return view('user/review/status', ['review' => $review]);
   }
 }

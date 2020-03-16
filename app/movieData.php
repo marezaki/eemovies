@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class movieData extends Model
+class MovieData extends Model
 {
     protected $guarded = array('id');
 
@@ -20,6 +20,6 @@ class movieData extends Model
 
     public function movies()
     {
-        return $this->hasMany('App\movieData');
+        return $this->hasMany('App\MovieData');
     }
 }
