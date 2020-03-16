@@ -26,6 +26,7 @@ class CreateReviewDataTable extends Migration
             $table->integer('disguesting');
             $table->integer('scary');
             $table->string('body', 300);
+            // $table->integer('spoilers');
             $table->timestamps();
         });
     }

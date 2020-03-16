@@ -36,6 +36,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
+                    <a class="logo" href="{{ action('User\ReviewController@index') }}"><img src="{{ asset('storage/image/logo/logo_red.png')}}" height=60px width=60px></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -52,7 +53,7 @@
                         
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
-                            {{-- 以下を追記 --}}
+
                         <!-- Authentication Links -->
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                         @guest
@@ -61,7 +62,7 @@
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                        {{ Auth::user()->name }}<span class="caret"></span>
                                     </a>
 
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,6 +70,7 @@
                                         <form id="logout-form" action="{{ action('Auth\TwitterController@logout') }}"　style="display: none;">
                                             @csrf
                                         </form>
+                                        <a class="dropdown-item" href="{{ action('Auth\TwitterController@logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
                                     </div>
                                 </li>
                             @endguest
@@ -84,7 +86,7 @@
                 @yield('content')
             </main>
             <div class="footer">
-                <p>Copyright © 2020 EE | MOVIES All Rights Reserved.</p>
+                <p class="copyright"><img class="footer-logo" src="{{ asset('storage/image/logo/logo.png')}}" height=30px width=30px>© 2020 EE | MOVIES</p>
             </div>
         </div>
     </body>
