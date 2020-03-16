@@ -1,12 +1,157 @@
 @import "variables";
 
-.py-4 {
-    background-image: url("/storage/image/about/smiley-2979107_1920.jpg");
+.top-container {
+    background-image : url("/storage/image/about/about.jpg");
     background-size: cover;
-    width: 100%;
-    height: 640px;
+    width: auto;
+    height: 600px;
+    margin: 0 auto;
 }
 
-.row-top {
-    margin-top: 200px;
+.content-wrapper {
+    height: 550px;
+    width: 60%;
+    margin: 0 auto;
+    // max-width: auto;
 }
+
+.left-container {
+    position: absolute;
+    top: 35%;
+}
+
+.comment {
+    // position: absolute;
+    // top: 50%;
+    // left: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    border-left: solid 3px rgb(207, 0, 0);
+    padding-left: 10px;
+    margin-bottom: 50px;
+}
+
+span {
+    font-size: 2.2rem;
+}
+
+.right-container {
+    position: absolute;
+    top: 35%;
+    margin-left: 550px;
+}
+
+.logo-image {
+    height: 15rem;
+    width: 15rem;
+}
+
+.middle-container {
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+}
+
+.middle-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+}
+
+.middle-content {
+    background-color: white;
+    // padding: 40 40px;
+    margin-top: 100px;
+    // border: solid 1px rgb(168, 168, 168);
+    // border-radius: 5px;
+    text-align: center;
+}
+
+.middle-content h2 {
+    font-size: 2.0rem;
+    color: rgb(32, 32, 32);
+    border-bottom: solid 2px rgb(192, 192, 192);
+    padding-bottom: 10px;
+}
+
+.middle-p {
+    margin-top: 20px;
+    font-size: 1.0rem;
+    color: gray;
+}
+
+.bottom-container {
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+}
+
+.bottom-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+}
+
+.bottom-content {
+    background-color: white;
+    // padding: 40 40px;
+    // margin-top: 60px;
+    text-align: center;
+}
+
+.bottom-content h2 {
+    font-size: 2.0rem;
+    color: rgb(32, 32, 32);
+    border-bottom: solid 2px rgb(192, 192, 192);
+    padding-bottom: 10px;
+}
+
+.bottom-p {
+    margin-top: 20px;
+    font-size: 1.0rem;
+    color: gray;
+}
+
+.evaluation-image {
+    height: 10rem;
+    width: 10rem;
+}
+
+    i {
+        font-size: 5.0rem;
+    }
+
+    .far.fa-smile-beam {
+        color: $happy;
+    }
+
+    .far.fa-grin-squint {
+        color: $excited;
+    }
+
+    .far.fa-grin-squint-tears {
+        color: $funny;
+    }
+
+    .far.fa-sad-tear {
+        color: $sad;
+    }
+
+    .far.fa-angry {
+        color: $disgusted;
+    }
+
+    .far.fa-flushed {
+        color: $scary;
+    }
+
+    .emotional {
+        margin: 20px;
+    }
+
+    .level {
+        font-size: 40px;
+        margin: 15px;
+    }

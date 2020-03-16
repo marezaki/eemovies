@@ -1,4 +1,79 @@
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: auto;
+}
+
 .row-top {
-  margin-top: 100px;
+  margin-top: 110px;
+}
+
+h2 {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: solid 2px #c7c7c7;
+}
+
+.tag {
+  font-size: 15px;
+  background-color: #424242;
+  color: white;
+  padding: 5 10px;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.image {
+  margin-top: 20px;
+}
+
+.movie-image {
+  height: auto;
+  max-width: 400px;
+  width: auto;
+}
+
+.director {
+  font-size: 15px;
+}
+
+.actor {
+  font-size: 15px;
+}
+
+.description {
+  font-size: 15px;
+}
+
+.year {
+  font-size: 15px;
+}
+
+.type {
+  font-size: 15px;
+}
+
+.country {
+  font-size: 15px;
+}
+
+.create {
+  display: inline-block;
+  padding: 10 20px;
+  background-color: #d30000;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.create:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.781);
+  background-color: rgba(211, 0, 0, 0.726);
+  transition: 0.5s;
 }
 

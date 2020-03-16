@@ -19,6 +19,18 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
-$image_color: rgb(206, 0, 0);
-$back_user: rgb(255, 254, 247);
-$back_admin: rgb(46, 32, 19);
+//定義した方が楽なやつ
+$border: rgb(199, 199, 199);
+
+// バックカラー
+$image_color: rgb(247, 240, 184);
+$user_back: white;
+$admin_back: rgb(66, 66, 66);
+
+// 評価カラー
+$happy: rgb(236, 126, 126);
+$excited: rgb(255, 196, 118);
+$funny: rgb(199, 235, 101);
+$sad: rgb(114, 202, 236);
+$disgusted: rgb(173, 144, 221);
+$scary: rgb(107, 107, 107);

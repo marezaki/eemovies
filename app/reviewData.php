@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class reviewData extends Model
+class ReviewData extends Model
 {
     protected $guarded = array('id');
 
@@ -13,7 +13,13 @@ class reviewData extends Model
         'total' => 'required',
     );
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo('App\User');
+    }
+
+    public function movie()
+    {
+        return $this->belongsTo('App\MovieData');
     }
 }

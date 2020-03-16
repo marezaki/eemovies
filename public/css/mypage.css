@@ -1,4 +1,96 @@
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: auto;
+}
+
 .row-top {
-  margin-top: 100px;
+  margin-top: 110px;
+}
+
+h2 {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: solid 2px #c7c7c7;
+}
+
+.card {
+  width: 16em;
+  margin: 40px 0;
+  box-shadow: 0 0 8px gray;
+}
+
+.card-image {
+  width: auto;
+  height: 160px;
+}
+
+.card-movie {
+  font-size: 15px;
+  color: #424242;
+}
+
+.card-movie:hover {
+  text-decoration: none;
+  color: #d30000;
+}
+
+.evaluation {
+  height: 80px;
+  width: 80px;
+}
+
+.card-i-1 {
+  font-size: 32px;
+}
+
+.card-i-2 {
+  font-size: 32px;
+}
+
+.far.fa-smile-beam {
+  color: #ec7e7e;
+}
+
+.far.fa-grin-squint {
+  color: #ffc476;
+}
+
+.far.fa-grin-squint-tears {
+  color: #c7eb65;
+}
+
+.far.fa-sad-tear {
+  color: #72caec;
+}
+
+.far.fa-angry {
+  color: #ad90dd;
+}
+
+.far.fa-flushed {
+  color: #6b6b6b;
+}
+
+.card-title {
+  font-size: 15px;
+  color: #424242;
+}
+
+.card-title:hover {
+  text-decoration: none;
+  color: #d30000;
+}
+
+.spoilers {
+  font-size: 15px;
+  padding: 0 10px;
+  width: 115px;
+  color: #d30000;
+  border: solid 2px #d30000;
+}
+
+.card-user {
+  color: gray;
 }
 

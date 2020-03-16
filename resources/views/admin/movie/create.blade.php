@@ -22,6 +22,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-md-2" for="japanese">邦題</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="title" value="{{ old('japanese') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-md-2" for="director">監督</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="director" value="{{ old('director') }}">

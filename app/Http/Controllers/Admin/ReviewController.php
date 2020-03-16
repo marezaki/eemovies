@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\reviewData;
 
 class ReviewController extends Controller
 {
@@ -25,6 +24,4 @@ class ReviewController extends Controller
     // 他人のレビュー詳細画面
     return redirect('user/review/status');
   }
-
-
 }

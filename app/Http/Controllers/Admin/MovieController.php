@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\movieData;
+use App\MovieData;
 
 class MovieController extends Controller
 {
@@ -12,12 +12,12 @@ class MovieController extends Controller
     {
         return view('admin.movie.create');
     }
-  
+
     public function create(Request $request)
     {
-        $this->validate($request, movieData::$rules);
+        $this->validate($request, MovieData::$rules);
 
-        $movies = new movieData;
+        $movies = new MovieData;
         $form = $request->all();
 
         if (isset($form['image'])) {
@@ -39,27 +39,27 @@ class MovieController extends Controller
     {
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
-            $posts = movieData::where('title', $cond_title)->get();
+            $posts = MovieData::where('title', $cond_title)->get();
         } else {
-            $posts = movieData::all();
+            $posts = MovieData::all();
         }
         return view('admin.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function edit(Request $request)
     {
-        $movies = movieData::find($request->id);
+        $movies = MovieData::find($request->id);
         if (empty($movies)) {
             abort(404);
         }
-        return view('admin.movie.edit', ['movies_form'=>$movies]);
+        return view('admin.movie.edit', ['movies_form' => $movies]);
     }
 
     public function update(Request $request)
     {
-        $this->validate($request, movieData::$rules);
+        $this->validate($request, MovieData::$rules);
 
-        $movies = movieData::find($request->id);
+        $movies = MovieData::find($request->id);
         $movies_form = $request->all();
         if (isset($movies_form['image'])) {
             $path = $request->file('image')->store('public/image');
@@ -78,12 +78,10 @@ class MovieController extends Controller
 
     public function delete(Request $request)
     {
-        $movies = movieData::find($request->id);
+        $movies = MovieData::find($request->id);
 
         $movies->delete();
-        
+
         return redirect('admin/movie/index');
     }
-
-  
 }
