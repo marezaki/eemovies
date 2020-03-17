@@ -11,8 +11,8 @@ class MovieController extends Controller
     public function index(Request $request)
     {
         $cond_title = $request->cond_title;
-        if ($cond_title != '') {
-            $posts = MovieData::where('title', $cond_title)->get();
+        if ($cond_title != null) {
+            $posts = MovieData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
         } else {
             $posts = MovieData::all();
         }

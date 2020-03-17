@@ -70,7 +70,7 @@
                                         <form id="logout-form" action="{{ action('Auth\TwitterController@logout') }}"　style="display: none;">
                                             @csrf
                                         </form>
-                                        <a class="dropdown-item" href="{{ action('Auth\TwitterController@logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+                                        {{-- <a class="dropdown-item" href="{{ action('User\UserController@edit') }}">プロフィール編集</a> --}}
                                     </div>
                                 </li>
                             @endguest

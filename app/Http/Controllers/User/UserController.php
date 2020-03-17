@@ -33,6 +33,12 @@ class UserController extends Controller
         return view('user.mypage.about');
     }
 
+    public function edit(Request $request)
+    {
+        // このサイトについての説明画面
+        return view('user.mypage.about');
+    }
+
     // public function request(Request $request)
     // {
     //     // このサイトについての説明画面
