@@ -90,16 +90,18 @@ i {
 
 .status {
   display: inline-block;
-  padding: 0 10px;
+  padding: 5 10px;
   color: #d60000;
   font-size: 20px;
-  border-bottom: solid 2px #d60000;
+  border: solid 2px #d60000;
+  border-radius: 5px;
 }
 
 .status:hover {
   text-decoration: none;
   color: rgba(214, 0, 0, 0.801);
-  border-bottom: solid 2px rgba(214, 0, 0, 0.822);
+  background-color: #d60000;
+  color: white;
   transition: 0.5s;
 }
 

@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.guest')
 <link href="{{ asset('css/review.css') }}" rel="stylesheet">
 
 @section('title', '投稿一覧')
@@ -9,7 +9,7 @@
                 <h2>みんなのレビュー</h2>
         </div>
         <div class="serch-box">
-            <form action="{{ action('User\ReviewController@index') }}" method="get">
+            <form action="{{ action('Guest\ReviewController@index') }}" method="get">
                 <div class="serch-comment">レビュータイトルを検索する</div>
                 <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                 {{ csrf_field() }}
@@ -23,7 +23,7 @@
                         <div class="card">
                             <img class="card-image" src="{{ asset('storage/image/'.$review->movie->image_path )}}" class="card-img-top">
                             <div class="card-body">
-                                <a class="card-movie" href="{{ action('User\MovieController@status', ['id' => $review->movie_id]) }}">{{ $review->movie->japanese }}</a>
+                                <a class="card-movie" href="{{ action('Guest\MovieController@status', ['id' => $review->movie_id]) }}">{{ $review->movie->japanese }}</a>
                                 @if ($review->total == 1)
                                     <p><img class="evaluation" src="{{ asset('/storage/image/evaluation/a.jpg' )}}"></p>
                                 @elseif ($review->total == 2)
@@ -48,7 +48,7 @@
                                 @if ($review->spoilers == 1)
                                     <p class="spoilers">ネタバレ有り</p>
                                 @endif
-                                <a class="card-title" href="{{ action('User\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
+                                <a class="card-title" href="{{ action('Guest\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
                                 <p class="card-user">{{ $review->user->name }}</p>
                             </div>
                         </div>

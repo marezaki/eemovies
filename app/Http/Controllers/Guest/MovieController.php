@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Guest;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\MovieData;
 use App\ReviewData;
-use Illuminate\Support\Facades\Auth;
 
 class MovieController extends Controller
 {
@@ -19,7 +18,7 @@ class MovieController extends Controller
             $posts = MovieData::all();
         }
         \Debugbar::info($cond_title);
-        return view('user.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('guest.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
     public function status(Request $request)
@@ -32,11 +31,7 @@ class MovieController extends Controller
         } else {
             $posts = ReviewData::all();
         }
-        // $user_id = Auth::user()->id;
-        // \Debugbar::info($user_id);
-        // $movie_id = MovieData::find('id');
-        // $posts = MovieData::find($movie_id);
 
-        return view('user.movie.status', ['movies' => $movies, 'posts' => $posts]);
+        return view('guest.movie.status', ['movies' => $movies, 'posts' => $posts]);
     }
 }

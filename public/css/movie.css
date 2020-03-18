@@ -20,13 +20,6 @@ h2 {
   width: auto;
 }
 
-button {
-  background-color: #4b4b4b;
-  border-color: #4b4b4b;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
 .fas.fa-search {
   color: white;
 }
@@ -35,6 +28,7 @@ button {
   width: 16em;
   margin: 40px 0;
   box-shadow: 0 0 8px gray;
+  margin-left: 2.8rem;
 }
 
 .card-img-top {

@@ -14,10 +14,17 @@ h2 {
   border-bottom: solid 2px #c7c7c7;
 }
 
+.serch-box {
+  margin-top: 30px;
+  max-width: 400px;
+  width: auto;
+}
+
 .card {
   width: 16em;
   margin: 40px 0;
   box-shadow: 0 0 8px gray;
+  margin-left: 2.8rem;
 }
 
 .card-image {

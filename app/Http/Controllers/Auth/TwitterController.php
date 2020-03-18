@@ -1,25 +1,28 @@
 <?php
- 
+
 namespace App\Http\Controllers\Auth;
- 
+
 use App\Http\Controllers\Controller;
 use Auth;
 use Socialite;
 use App\User;
- 
+
 class TwitterController extends Controller
 {
     protected $redirectPath = '/home';
 
-    public function add() {
+    public function add()
+    {
         return view('user.twitter.login');
     }
 
-    public function redirectToProvider(){
+    public function redirectToProvider()
+    {
         return Socialite::driver('twitter')->redirect();
     }
 
-    public function handleProviderCallback(){
+    public function handleProviderCallback()
+    {
         try {
             $user = Socialite::driver('twitter')->user();
         } catch (Exception $e) {
@@ -31,9 +34,10 @@ class TwitterController extends Controller
         return redirect('user/about');
     }
 
-    private function findOrCreateUser($twitterUser){
+    private function findOrCreateUser($twitterUser)
+    {
         $authUser = User::where('twitter_id', $twitterUser->id)->first();
-        if ($authUser){
+        if ($authUser) {
             return $authUser;
         }
 
@@ -45,11 +49,10 @@ class TwitterController extends Controller
             'avatar' => $twitterUser->avatar_original
         ]);
     }
-    
+
     public function logout()
     {
         Auth::logout();
-        return redirect("/user/about");
+        return redirect("/about");
     }
 }
-    

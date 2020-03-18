@@ -49,7 +49,7 @@ class ReviewController extends Controller
   {
     $cond_title = $request->cond_title;
     if ($cond_title != '') {
-      $posts = ReviewData::where('title', $cond_title)->get();
+      $posts = ReviewData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
     } else {
       $posts = ReviewData::all();
     }
@@ -61,7 +61,12 @@ class ReviewController extends Controller
   {
     // 他人のレビュー詳細画面
     $review = ReviewData::find($request->id);
-    $user_id = Auth::user()->id;
-    return view('user/review/status', ['review' => $review, 'user_id' => $user_id]);
+    // $user_id = Auth::user()->id;
+    if (Auth::user()->id != null) {
+      return view('user/review/status', ['review' => $review, 'user_id' => $user_id]);
+    } else {
+      return view('user/about');
+    }
+    // return view('user/review/status', ['review' => $review, 'user_id' => $user_id]);
   }
 }

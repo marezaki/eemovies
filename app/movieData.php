@@ -18,8 +18,14 @@ class MovieData extends Model
         'country' => 'required',
     );
 
-    public function movies()
+
+    public function reviews()
     {
-        return $this->hasMany('App\MovieData');
+        return $this->hasMany('App\ReviewData');
     }
+
+    // public function movies()
+    // {
+    //     return $this->hasMany('App\MovieData');
+    // }
 }

@@ -9,5 +9,6 @@
     "/css/movie.css": "/css/movie.css",
     "/css/movie.status.css": "/css/movie.status.css",
     "/css/review.create.css": "/css/review.create.css",
-    "/css/review.status.css": "/css/review.status.css"
+    "/css/review.status.css": "/css/review.status.css",
+    "/css/login.css": "/css/login.css"
 }

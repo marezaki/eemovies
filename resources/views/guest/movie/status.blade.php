@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.guest')
 <link href="{{ asset('css/movie.status.css') }}" rel="stylesheet">
 
 @section('title', '作品詳細')
@@ -58,7 +58,6 @@
                         {{ $movies->country }}
                     </div>
                 </div>
-                <a class="create" href="{{ action('User\ReviewController@add', ['id' => $movies->id])}}">この作品を評価する</a>
             </form>  
         </div>
         <div class="evaluation-content">
@@ -97,7 +96,7 @@
                                     @if ($review->spoilers == 1)
                                         <p class="spoilers">ネタバレ有り</p>
                                     @endif
-                                    <a class="card-title" href="{{ action('User\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
+                                    <a class="card-title" href="{{ action('Guest\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
                                     <p class="card-user">{{ $review->user->name }}</p>
                                 </div>
                             </div>

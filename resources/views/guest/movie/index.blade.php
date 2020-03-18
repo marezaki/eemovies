@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.guest')
 <link href="{{ asset('css/movie.css') }}" rel="stylesheet">
 
 @section('title', '作品一覧')
@@ -20,9 +20,9 @@
                 <table class="table">
                     @foreach($posts as $movie)
                         <div class="card">
-                            <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ asset('storage/image/'.$movie->image_path )}}" class="card-img-top"></a>
+                            <a href="{{ action('Guest\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ asset('storage/image/'.$movie->image_path )}}" class="card-img-top"></a>
                             <div class="card-body">
-                                <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}" class="card-title">{{ $movie->japanese }}</a>
+                                <a href="{{ action('Guest\MovieController@status', ['id' => $movie->id]) }}" class="card-title">{{ $movie->japanese }}</a>
                                 <p class="card-text">{{ $movie->description }}</p>
                             </div>
                         </div>
