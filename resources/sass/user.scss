@@ -1,0 +1,114 @@
+@import "variables";
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:100%;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $user_back;
+  color: rgb(31, 31, 31);
+}
+
+.navbar-laravel {
+  background-color: $image_color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+
+.container {
+  font-size: 16px;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 40px;
+  padding: 10px 0;
+}
+
+.footer-logo {
+  margin-right: 10px;
+}
+
+.menu {
+  color: rgb(90, 90, 90);
+  border-left: solid 1px rgb(226, 0, 0);
+  padding: 5px 20px;
+  margin: 15px 0;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.menu:before{
+  position: absolute;
+  top: 35px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background: rgb(226, 0, 0);
+  transition: 0.5s;
+}
+
+.menu:hover:before{
+  width: 100%;
+}
+
+.menu:hover {
+  color: rgb(204, 0, 0);
+  text-decoration: none;
+}
+
+.footer {
+  width: 100%;
+  height: 100px; 
+  padding: 40px 0;
+  background-color: $admin_back;
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
+
+.nav-link {
+  color: rgb(90, 90, 90) !important;
+}
+
+.nav-link:hover {
+  color: rgb(207, 0, 0) !important;
+  transition: 0.3s;
+}
+
+.table-dark {
+  color: #fff;
+}
+
+.list-group-item {
+  border-color: #fff;
+  background-color: #000;
+}
+
+.login-box {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.login-header {
+  background-color: rgba(0, 0, 0, 0.25)
+}
+
+.login-body {
+  background-color: rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,107 @@
+@import "variables";
+
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: auto;
+}
+
+.row-top {
+    margin-top: 110px;
+}
+
+h2 {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: solid 2px $border;
+}
+
+.tag {
+    font-size: 15px;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    padding: 5 10px;
+    margin: 20px 0;
+}
+
+.title {
+    max-width: 400px;
+    width: auto;
+}
+
+i {
+    font-size: 50px;
+}
+
+.far.fa-smile-beam {
+    color: $happy;
+}
+
+.far.fa-grin-squint {
+    color: $excited;
+}
+
+.far.fa-grin-squint-tears {
+    color: $funny;
+}
+
+.far.fa-sad-tear {
+    color: $sad;
+}
+
+.far.fa-angry {
+    color: $disgusted;
+}
+
+.far.fa-flushed {
+    color: $scary;
+}
+
+.title {
+    width: auto;
+}
+
+.emotional {
+    margin: 20px;
+}
+
+.level {
+    font-size: 30px;
+    margin: 10px;
+}
+
+select {
+    height: 40px;
+    width: 100px;
+}
+
+.comment {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.body {
+    max-width: 400px;
+    width: auto;
+}
+
+.button {
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 10 60px;
+    border: solid 2px rgb(211, 0, 0);
+    color: rgb(211, 0, 0);
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s;
+    background-color: rgb(211, 0, 0);
+}
+
+span {
+    font-size: 30px;
+}

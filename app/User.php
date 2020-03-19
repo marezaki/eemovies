@@ -10,13 +10,17 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function reviews()
+    {
+        return $this->hasMany('App\ReviewData');
+    }
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'nickname', 'twitter_id', 'avatar'
     ];
 
     /**

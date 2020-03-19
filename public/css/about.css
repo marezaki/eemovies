@@ -1,0 +1,141 @@
+.top-container {
+  background-image: url("/storage/image/about/about.jpg");
+  background-size: cover;
+  width: auto;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  height: 550px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.left-container {
+  position: absolute;
+  top: 35%;
+}
+
+.comment {
+  color: white;
+  font-size: 1.8rem;
+  border-left: solid 3px #cf0000;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+span {
+  font-size: 2.2rem;
+}
+
+.right-container {
+  position: absolute;
+  top: 35%;
+  margin-left: 550px;
+}
+
+.logo-image {
+  height: 15rem;
+  width: 15rem;
+}
+
+.middle-container {
+  background-color: white;
+  height: 500px;
+}
+
+.middle-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.middle-content {
+  background-color: white;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.middle-content h2 {
+  font-size: 2rem;
+  color: #202020;
+  border-bottom: solid 2px silver;
+  padding-bottom: 10px;
+}
+
+.middle-p {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: gray;
+}
+
+.bottom-container {
+  background-color: white;
+  height: 500px;
+}
+
+.bottom-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.bottom-content {
+  background-color: white;
+  text-align: center;
+}
+
+.bottom-content h2 {
+  font-size: 2rem;
+  color: #202020;
+  border-bottom: solid 2px silver;
+  padding-bottom: 10px;
+}
+
+.bottom-p {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: gray;
+}
+
+.evaluation-image {
+  height: 10rem;
+  width: 10rem;
+}
+
+i {
+  font-size: 5rem;
+}
+
+.far.fa-smile-beam {
+  color: #ec7e7e;
+}
+
+.far.fa-grin-squint {
+  color: #ffc476;
+}
+
+.far.fa-grin-squint-tears {
+  color: #c7eb65;
+}
+
+.far.fa-sad-tear {
+  color: #72caec;
+}
+
+.far.fa-angry {
+  color: #ad90dd;
+}
+
+.far.fa-flushed {
+  color: #6b6b6b;
+}
+
+.emotional {
+  margin: 20px;
+}
+
+.level {
+  font-size: 40px;
+  margin: 15px;
+}
+

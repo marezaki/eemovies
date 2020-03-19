@@ -1,0 +1,128 @@
+@import "variables";
+
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: auto;
+}
+
+.row-top {
+    margin-top: 110px;
+}
+
+h2 {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: solid 2px $border;
+}
+
+.movie-title {
+    font-size: 20px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.body {
+    background-color: rgb(66, 66, 66);
+    border-radius: 5px;
+    padding: 10 20px;
+    color: white;
+    max-width: 600px;
+    width: auto;
+}
+
+.tag {
+    font-size: 15px;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    padding: 5 10px;
+    margin-top: 20px;
+}
+
+.evaluation {
+    height: 150px;
+    width: 150px;
+}
+
+i {
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+    .far.fa-smile-beam {
+        color: $happy;
+    }
+
+    .far.fa-grin-squint {
+        color: $excited;
+    }
+
+    .far.fa-grin-squint-tears {
+        color: $funny;
+    }
+
+    .far.fa-sad-tear {
+        color: $sad;
+    }
+
+    .far.fa-angry {
+        color: $disgusted;
+    }
+
+    .far.fa-flushed {
+        color: $scary;
+    }
+
+.level {
+    font-size: 20px;
+    margin: 20px 20px;
+}
+
+.number {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.created {
+    font-size: 15px;
+    color: gray;
+}
+
+
+.status {
+    display: inline-block;
+    padding: 5 10px;
+    color: rgb(214, 0, 0);
+    font-size: 20px;
+    border: solid 2px rgb(214, 0, 0);
+    border-radius: 5px;
+}
+
+.status:hover {
+    text-decoration: none;
+    color: rgba(214, 0, 0, 0.801);
+    background-color: rgb(214, 0, 0);
+    color: white;
+    transition: 0.5s;
+}
+
+.delete-button {
+    float: right;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+    color: rgb(214, 0, 0);
+    font-size: 1.2rem;
+    width: 7.5rem;
+    padding: 5 10px;
+    border: solid 3px rgb(214, 0, 0);
+}
+
+.delete-button:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(214, 0, 0);
+    transition: 0.5s;
+}

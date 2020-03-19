@@ -1,0 +1,126 @@
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: auto;
+}
+
+.row-top {
+  margin-top: 110px;
+}
+
+h2 {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: solid 2px #c7c7c7;
+}
+
+.movie-title {
+  font-size: 20px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.body {
+  background-color: #424242;
+  border-radius: 5px;
+  padding: 10 20px;
+  color: white;
+  max-width: 600px;
+  width: auto;
+}
+
+.tag {
+  font-size: 15px;
+  background-color: #424242;
+  color: white;
+  padding: 5 10px;
+  margin-top: 20px;
+}
+
+.evaluation {
+  height: 150px;
+  width: 150px;
+}
+
+i {
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+.far.fa-smile-beam {
+  color: #ec7e7e;
+}
+
+.far.fa-grin-squint {
+  color: #ffc476;
+}
+
+.far.fa-grin-squint-tears {
+  color: #c7eb65;
+}
+
+.far.fa-sad-tear {
+  color: #72caec;
+}
+
+.far.fa-angry {
+  color: #ad90dd;
+}
+
+.far.fa-flushed {
+  color: #6b6b6b;
+}
+
+.level {
+  font-size: 20px;
+  margin: 20px 20px;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.created {
+  font-size: 15px;
+  color: gray;
+}
+
+.status {
+  display: inline-block;
+  padding: 5 10px;
+  color: #d60000;
+  font-size: 20px;
+  border: solid 2px #d60000;
+  border-radius: 5px;
+}
+
+.status:hover {
+  text-decoration: none;
+  color: rgba(214, 0, 0, 0.801);
+  background-color: #d60000;
+  color: white;
+  transition: 0.5s;
+}
+
+.delete-button {
+  float: right;
+  text-align: center;
+  margin-top: 20px;
+  display: inline-block;
+  color: #d60000;
+  font-size: 1.2rem;
+  width: 7.5rem;
+  padding: 5 10px;
+  border: solid 3px #d60000;
+}
+
+.delete-button:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #d60000;
+  transition: 0.5s;
+}
+

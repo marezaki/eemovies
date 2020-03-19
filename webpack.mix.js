@@ -12,4 +12,16 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/admin.scss', 'public/css')
+    .sass('resources/sass/user.scss', 'public/css')
+    .sass('resources/sass/about.scss', 'public/css')
+    .sass('resources/sass/review.scss', 'public/css')
+    .sass('resources/sass/mypage.scss', 'public/css')
+    .sass('resources/sass/movie.scss', 'public/css')
+    .sass('resources/sass/movie.status.scss', 'public/css')
+    .sass('resources/sass/review.create.scss', 'public/css')
+    .sass('resources/sass/review.status.scss', 'public/css')
+    .sass('resources/sass/login.scss', 'public/css');
+
+
