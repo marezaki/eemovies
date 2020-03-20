@@ -15,8 +15,8 @@ class CreateReviewDataTable extends Migration
     {
         Schema::create('review_data', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('user_id');
-            $table->string('movie_id');
+            $table->integer('user_id');
+            $table->integer('movie_id');
             $table->string('title', 20);
             $table->integer('total');
             $table->integer('happy');

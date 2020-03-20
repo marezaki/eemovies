@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\MovieData;
+use Storage;
 
 class MovieController extends Controller
 {
@@ -21,8 +22,8 @@ class MovieController extends Controller
         $form = $request->all();
 
         if (isset($form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $movies->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/', $form['image'], 'public');
+            $movies->image_path = Storage::disk('s3')->url($path);
         } else {
             $movies->image_path = null;
         }
@@ -58,12 +59,13 @@ class MovieController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, MovieData::$rules);
+        $form = $request->all();
 
         $movies = MovieData::find($request->id);
         $movies_form = $request->all();
         if (isset($movies_form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $movies->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/', $form['image'], 'public');
+            $movies->image_path = Storage::disk('s3')->url($path);
             unset($movies_form['image']);
         } elseif (0 == strcmp($request->remove, 'true')) {
             $movies->image_path = null;
