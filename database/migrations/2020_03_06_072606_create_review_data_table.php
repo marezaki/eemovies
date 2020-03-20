@@ -23,10 +23,10 @@ class CreateReviewDataTable extends Migration
             $table->integer('excited');
             $table->integer('funny');
             $table->integer('sad');
-            $table->integer('disguesting');
+            $table->integer('disgusted');
             $table->integer('scary');
             $table->string('body', 300);
-            // $table->integer('spoilers');
+            $table->integer('spoilers');
             $table->timestamps();
         });
     }
