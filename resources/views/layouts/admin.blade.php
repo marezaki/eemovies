@@ -30,7 +30,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class="logo" href="{{ action('User\ReviewController@index') }}"><img src="{{ asset('storage/image/logo/logo_red.png')}}" height=60px width=60px></a>
+                    <a class="logo" href="{{ action('User\ReviewController@index') }}"><img src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png')}}" height=60px width=60px></a>
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
@@ -60,7 +60,7 @@
                 @yield('content')
             </main>
             <div class="footer">
-                <p><img class="footer-logo" src="{{ asset('storage/image/logo/logo.png')}}" height=40px width=40px>Copyright © 2020 EE | MOVIES All Rights Reserved.</p>
+                <p><img class="footer-logo" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo.png')}}" height=40px width=40px>Copyright © 2020 EE | MOVIES All Rights Reserved.</p>
             </div>
         </div>
     </body>
