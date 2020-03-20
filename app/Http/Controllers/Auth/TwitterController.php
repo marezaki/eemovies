@@ -40,11 +40,11 @@ class TwitterController extends Controller
         if ($authUser) {
             return $authUser;
         }
-
         return User::create([
-
             'name' => $twitterUser->name,
             'nickname' => $twitterUser->nickname,
+            'email' => $twitterUser->email,
+            'password' => $twitterUser->nickname,
             'twitter_id' => $twitterUser->id,
             'avatar' => $twitterUser->avatar_original
         ]);
