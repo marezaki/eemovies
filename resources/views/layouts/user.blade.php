@@ -25,11 +25,6 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/user.css') }}" rel="stylesheet">
 
-        {{-- chart.jsの読み込み --}}
-        {{-- <script async="" src={{ asset("//www.google-analytics.com/analytics.js") }}></script> --}}
-        {{-- <script src={{ asset("../../../dist/2.9.3/Chart.min.js") }}></script> --}}
-        {{-- <script src={{ asset("../utils.js") }}></script> --}}
-
     </head>
     <body>
         <div id="app">

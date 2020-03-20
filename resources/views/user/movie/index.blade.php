@@ -20,7 +20,8 @@
                 <table class="table">
                     @foreach($posts as $movie)
                         <div class="card">
-                            <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ asset('storage/image/'.$movie->image_path )}}" class="card-img-top"></a>
+                            {{-- <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ asset('storage/image/'.$movie->image_path )}}" class="card-img-top"></a> --}}
+                            <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ $movie->image_path )}}" class="card-img-top"></a>
                             <div class="card-body">
                                 <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}" class="card-title">{{ $movie->japanese }}</a>
                                 <p class="card-text">{{ $movie->description }}</p>
