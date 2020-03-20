@@ -18,7 +18,6 @@ class MovieController extends Controller
         } else {
             $posts = MovieData::all();
         }
-        \Debugbar::info($cond_title);
         return view('user.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
@@ -32,10 +31,6 @@ class MovieController extends Controller
         } else {
             $posts = ReviewData::all();
         }
-        // $user_id = Auth::user()->id;
-        // \Debugbar::info($user_id);
-        // $movie_id = MovieData::find('id');
-        // $posts = MovieData::find($movie_id);
 
         return view('user.movie.status', ['movies' => $movies, 'posts' => $posts]);
     }

@@ -17,7 +17,6 @@ class MovieController extends Controller
         } else {
             $posts = MovieData::all();
         }
-        \Debugbar::info($cond_title);
         return view('guest.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
 

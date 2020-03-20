@@ -19,8 +19,6 @@ class UserController extends Controller
         } else {
             $posts = ReviewData::all();
         }
-        // $user = User::find('id');
-        // \Debugbar::info($posts);
         $user_id = Auth::user()->id;
         $posts = User::find($user_id)->reviews;
 
@@ -38,10 +36,4 @@ class UserController extends Controller
         // このサイトについての説明画面
         return view('user.mypage.about');
     }
-
-    // public function request(Request $request)
-    // {
-    //     // このサイトについての説明画面
-    //     return view('user.mypage.about');
-    // }
 }
