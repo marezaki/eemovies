@@ -16,7 +16,7 @@ class CreateMovieDataTable extends Migration
         Schema::create('movie_data', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            //$table->string('japanese');
+            $table->string('japanese');
             $table->string('director');
             $table->string('actor');
             $table->string('image_path')->nullable();
