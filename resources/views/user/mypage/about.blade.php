@@ -13,7 +13,7 @@
                 <h4 class="comment three">Emotional Evaluation</h4>
             </div>
             <div class="right-container">
-                <img class="logo-image" src="/storage/image/logo/logo.png">
+                <img class="logo-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo.png">
             </div>
         </div>
     </div>
@@ -48,11 +48,11 @@
                     <p>あなたのお気に入りの作品を評価しましょう！</p>
                 </div>
                 <div class="evaluation">
-                    <img class="evaluation-image" src="/storage/image/evaluation/a.jpg">
-                    <img class="evaluation-image" src="/storage/image/evaluation/b.jpg">
-                    <img class="evaluation-image" src="/storage/image/evaluation/c.jpg">
-                    <img class="evaluation-image" src="/storage/image/evaluation/d.jpg">
-                    <img class="evaluation-image" src="/storage/image/evaluation/e.jpg">
+                    <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/a-1015528_640.jpg">
+                    <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/b-1015529_640.jpg">
+                    <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/c-1015531_640.jpg">
+                    <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/d-1015532_640.jpg">
+                    <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/e-1015533_640.jpg">
                 </div>
             </div>
         </div>
