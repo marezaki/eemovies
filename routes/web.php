@@ -55,11 +55,11 @@ Route::get('twitter/login', 'Guest\GuestController@login');
 
 // Twitter API OAuth認証
 // ログインURL
-Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
+Route::get('/auth/twitter', 'Auth\TwitterController@redirectToProvider')->name("twitter.login");
 // // コールバックURL
-Route::get('auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback');
+Route::get('/auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback');
 // // ログアウトURL
-Route::get('auth/twitter/logout', 'Auth\TwitterController@logout');
+Route::get('/auth/twitter/logout', 'Auth\TwitterController@logout');
 
 
 Auth::routes();
