@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <div class="image">
-                        <img class="movie-image" src="{{ asset('storage/image/'.$movies->image_path )}}">
+                        <img class="movie-image" src="{{ $movies->image_path }}">
                     </div>
                 </div>
                 <div class="form-group">
