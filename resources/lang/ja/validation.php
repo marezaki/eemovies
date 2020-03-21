@@ -155,14 +155,6 @@ return [
         'type' => 'ジャンル',
         'country' => '製作国',
         'body' => '本文',
-        'total' => '総合評価',
-        'happy' => '喜び度',
-        'excited' => '楽し度',
-        'funny' => '笑い度',
-        'sad' => '悲し度',
-        'disgusted' => '怒り度',
-        'scary' => '怖い度',
-        // 'spoiler' => 'ネタバレの有無',
     ],
 
 ];

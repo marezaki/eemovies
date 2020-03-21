@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // 管理者サイド
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
