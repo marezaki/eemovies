@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </form>
-                <a href="{{ action('Admin\MovieController@delete', ['id' => $movie->id]) }}">削除</a>
+                {{-- <a href="{{ action('Admin\MovieController@delete', ['id' => $movie->id]) }}">削除</a> --}}
             </div>
         </div>
     </div>

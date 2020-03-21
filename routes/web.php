@@ -18,12 +18,12 @@
 // 管理者サイド
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
-    // Route::get('movie/create', 'Admin\MovieController@add');
-    // Route::post('movie/create', 'Admin\MovieController@create');
-    // Route::get('movie/edit', 'Admin\MovieController@edit');
-    // Route::post('movie/edit', 'Admin\MovieController@update');
-    // Route::get('movie/delete', 'Admin\MovieController@delete');
-    // Route::get('movie/index', 'Admin\MovieController@index');
+    Route::get('movie/create', 'Admin\MovieController@add');
+    Route::post('movie/create', 'Admin\MovieController@create');
+    Route::get('movie/edit', 'Admin\MovieController@edit');
+    Route::post('movie/edit', 'Admin\MovieController@update');
+    Route::get('movie/delete', 'Admin\MovieController@delete');
+    Route::get('movie/index', 'Admin\MovieController@index');
 });
 
 // ユーザーサイド
