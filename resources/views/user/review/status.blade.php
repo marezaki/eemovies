@@ -59,15 +59,15 @@
                     <label class="tag" for="total">総合評価</label>
                     <div class="image">
                         @if ($review->total == 1)
-                            <img class="evaluation" src="{{ asset('/storage/image/evaluation/a.jpg' )}}">
+                            <img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/a-1015528_640.jpg') }}">
                         @elseif ($review->total == 2)
-                            <img class="evaluation" src="{{ asset('/storage/image/evaluation/b.jpg' )}}">
+                            <img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/b-1015529_640.jpg') }}">
                         @elseif ($review->total == 3)
-                            <img class="evaluation" src="{{ asset('/storage/image/evaluation/c.jpg' )}}">
+                            <img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/c-1015531_640.jpg') }}">
                         @elseif ($review->total == 4)
-                            <img class="evaluation" src="{{ asset('/storage/image/evaluation/d.jpg' )}}">
+                            <img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/d-1015532_640.jpg') }}">
                         @elseif ($review->total == 5)
-                            <img class="evaluation" src="{{ asset('/storage/image/evaluation/e.jpg' )}}">
+                            <img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/e-1015533_640.jpg') }}">
                         @endif
                     </div>
                 </div>         
