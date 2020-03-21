@@ -21,19 +21,19 @@
                 <table class="table">
                     @foreach($posts as $review)
                         <div class="card">
-                            <img class="card-image" src="{{ asset('storage/image/'.$review->movie->image_path )}}" class="card-img-top">
+                            <img class="card-image" src="{{ $review->movie->image_path }}" class="card-img-top">
                             <div class="card-body">
                                 <a class="card-movie" href="{{ action('Guest\MovieController@status', ['id' => $review->movie_id]) }}">{{ $review->movie->japanese }}</a>
                                 @if ($review->total == 1)
-                                    <p><img class="evaluation" src="{{ asset('/storage/image/evaluation/a.jpg' )}}"></p>
+                                    <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/a-1015528_640.jpg' )}}"></p>
                                 @elseif ($review->total == 2)
-                                    <p><img class="evaluation" src="{{ asset('/storage/image/evaluation/b.jpg' )}}"></p>
+                                    <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/b-1015529_640.jpg' )}}"></p>
                                 @elseif ($review->total == 3)
-                                    <p><img class="evaluation" src="{{ asset('/storage/image/evaluation/c.jpg' )}}"></p>
+                                    <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/c-1015531_640.jpg' )}}"></p>
                                 @elseif ($review->total == 4)
-                                    <p><img class="evaluation" src="{{ asset('/storage/image/evaluation/d.jpg' )}}"></p>
+                                    <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/d-1015532_640.jpg' )}}"></p>
                                 @elseif ($review->total == 5)
-                                    <p><img class="evaluation" src="{{ asset('/storage/image/evaluation/e.jpg' )}}"></p>
+                                    <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/e-1015533_640.jpg' )}}"></p>
                                 @endif
                                 <div class="card-i-1">
                                     <i class="far fa-smile-beam">{{ $review->happy }}</i>
