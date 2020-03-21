@@ -11,13 +11,14 @@ class ReviewController extends Controller
     public function index(Request $request)
     {
         $cond_title = $request->cond_title;
+        $reviews = null;
         if ($cond_title != '') {
-            $posts = ReviewData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
+            $reviews = ReviewData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
         } else {
-            $posts = ReviewData::all();
+            $reviews = ReviewData::all();
         }
 
-        return view('guest.review.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('guest.review.index', ['reviews' => $reviews, 'cond_title' => $cond_title]);
     }
 
     public function status(Request $request)

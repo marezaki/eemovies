@@ -20,7 +20,6 @@ class MovieController extends Controller
 
         $movies = new MovieData;
         $form = $request->all();
-
         if (isset($form['image'])) {
             $path = Storage::disk('s3')->putFile('/', $form['image'], 'public');
             $movies->image_path = Storage::disk('s3')->url($path);
@@ -40,49 +39,46 @@ class MovieController extends Controller
     {
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
-            $posts = MovieData::where('title', $cond_title)->get();
+            $movies = MovieData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
         } else {
-            $posts = MovieData::all();
+            $movies = MovieData::all();
         }
-        return view('admin.movie.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('admin.movie.index', ['movies' => $movies, 'cond_title' => $cond_title]);
     }
 
     public function edit(Request $request)
     {
-        $movies = MovieData::find($request->id);
-        if (empty($movies)) {
+        $movie = MovieData::find($request->id);
+        if (empty($movie)) {
             abort(404);
         }
-        return view('admin.movie.edit', ['movies_form' => $movies]);
+        return view('admin.movie.edit', ['movie' => $movie]);
     }
 
     public function update(Request $request)
     {
         $this->validate($request, MovieData::$rules);
-        $form = $request->all();
 
-        $movies = MovieData::find($request->id);
-        $movies_form = $request->all();
-        if (isset($movies_form['image'])) {
-            $path = Storage::disk('s3')->putFile('/', $form['image'], 'public');
-            $movies->image_path = Storage::disk('s3')->url($path);
-            unset($movies_form['image']);
+        $movie = MovieData::find($request->id);
+        $movie_form = $request->all();
+        if (isset($movie_form['image'])) {
+            $path = Storage::disk('s3')->putFile('/', $movie_form['image'], 'public');
+            $movie->image_path = Storage::disk('s3')->url($path);
+            unset($movie_form['image']);
         } elseif (0 == strcmp($request->remove, 'true')) {
-            $movies->image_path = null;
+            $movie->image_path = null;
         }
-        unset($movies_form['_token']);
-        unset($movies_form['remove']);
-
-        $movies->fill($movies_form)->save();
+        unset($movie_form['_token']);
+        unset($movie_form['remove']);
+        $movie->fill($movie_form)->save();
 
         return redirect('admin/movie/index');
     }
 
     public function delete(Request $request)
     {
-        $movies = MovieData::find($request->id);
-
-        $movies->delete();
+        $movie = MovieData::find($request->id);
+        $movie->delete();
 
         return redirect('admin/movie/index');
     }

@@ -19,7 +19,7 @@
         <div class="row-table col-md-12">
             <div class="row">
                 <table class="table">
-                    @foreach($posts as $review)
+                    @foreach($reviews as $review)
                         <div class="card">
                             <img class="card-image" src="{{ $review->movie->image_path }}" class="card-img-top">
                             <div class="card-body">

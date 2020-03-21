@@ -17,25 +17,25 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="title">タイトル</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ $movies_form->title }}">
+                            <input type="text" class="form-control" name="title" value="{{ $movie->title }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="japanese">邦題</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="japanese" value="{{ $movies_form->japanese }}">
+                            <input type="text" class="form-control" name="japanese" value="{{ $movie->japanese }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="director">監督</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="director" value="{{ $movies_form->director }}">
+                            <input type="text" class="form-control" name="director" value="{{ $movie->director }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="actor">キャスト</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="actor" value="{{ $movies_form->actor }}">
+                            <input type="text" class="form-control" name="actor" value="{{ $movie->actor }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -43,7 +43,7 @@
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                             <div class="form-text text-info">
-                                設定中: {{ $movies_form->image_path }}
+                                設定中: {{ $movie->image_path }}
                             </div>
                             <div class="form-check">
                                 <label class="form-check-label">
@@ -55,35 +55,36 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="description">説明文</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="description" rows="20">{{ $movies_form->description }}</textarea>
+                            <textarea class="form-control" name="description" rows="20">{{ $movie->description }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="year">公開年</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="year" value="{{ $movies_form->year }}">
+                            <input type="text" class="form-control" name="year" value="{{ $movie->year }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="type">ジャンル</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="type" value="{{ $movies_form->type }}">
+                            <input type="text" class="form-control" name="type" value="{{ $movie->type }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="country">製作国</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="country" value="{{ $movies_form->country }}">
+                            <input type="text" class="form-control" name="country" value="{{ $movie->country }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <input type="hidden" name="id" value="{{ $movies_form->id }}">
+                            <input type="hidden" name="id" value="{{ $movie->id }}">
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>
                     </div>
                 </form>
+                <a href="{{ action('Admin\MovieController@delete', ['id' => $movie->id]) }}">削除</a>
             </div>
         </div>
     </div>

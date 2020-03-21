@@ -39,7 +39,6 @@ class ReviewController extends Controller
   {
     // 自分の投稿の削除
     $review = ReviewData::find($request->id);
-
     $review->delete();
 
     return redirect('user/mypage');
@@ -48,13 +47,14 @@ class ReviewController extends Controller
   public function index(Request $request)
   {
     $cond_title = $request->cond_title;
+    $reviews = null;
     if ($cond_title != '') {
-      $posts = ReviewData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
+      $reviews = ReviewData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
     } else {
-      $posts = ReviewData::all();
+      $reviews = ReviewData::all();
     }
 
-    return view('user.review.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+    return view('user.review.index', ['reviews' => $reviews, 'cond_title' => $cond_title]);
   }
 
   public function status(Request $request)

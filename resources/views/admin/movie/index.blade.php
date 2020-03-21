@@ -38,17 +38,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $movies)
+                            @foreach($movies as $movie)
                                 <tr>
-                                    <th>{{ $movies->id }}</th>
-                                    <td>{{ str_limit($movies->title) }}</td>
-                                    <td>{{ str_limit($movies->director) }}</td>
+                                    <th>{{ $movie->id }}</th>
+                                    <td>{{ str_limit($movie->title) }}</td>
+                                    <td>{{ str_limit($movie->director) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\MovieController@edit', ['id' => $movies->id]) }}">編集</a>
-                                        </div>
-                                        <div>
-                                            <a href="{{ action('Admin\MovieController@delete', ['id' => $movies->id]) }}">削除</a>
+                                            <a href="{{ action('Admin\MovieController@edit', ['id' => $movie->id]) }}">編集</a>
                                         </div>
                                     </td>
                                 </tr>

@@ -7,13 +7,13 @@ use App\Http\Controllers\Controller;
 
 class GuestController extends Controller
 {
-    public function about(Request $request)
+    public function about()
     {
         // このサイトについての説明画面
         return view('guest.about');
     }
 
-    public function login(Request $request)
+    public function login()
     {
         // このサイトについての説明画面
         return view('guest.login');

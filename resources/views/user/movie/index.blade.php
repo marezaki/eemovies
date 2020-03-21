@@ -18,7 +18,7 @@
         <div class="row-table col-md-12">
             <div class="row">
                 <table class="table">
-                    @foreach($posts as $movie)
+                    @foreach($movies as $movie)
                         <div class="card">
                             <a href="{{ action('User\MovieController@status', ['id' => $movie->id]) }}"><img src="{{ $movie->image_path }}" class="card-img-top"></a>
                             <div class="card-body">
