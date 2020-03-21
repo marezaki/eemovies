@@ -43,7 +43,6 @@
                         <ul class="navbar-nav mr-auto">
                             <a class="menu"　href="{{ action('Admin\MovieController@add') }}">作品の追加</a>
                             <a class="menu"　href="{{ action('Admin\MovieController@index') }}">作品の一覧</a>
-                            <a class="menu"　href="{{ action('Admin\ReviewController@index') }}">投稿の一覧</a>
                         </ul>
 
                         <!-- Right Side Of Navbar -->

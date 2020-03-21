@@ -7,9 +7,6 @@
             <h2>作品管理</h2>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <a href="{{ action('Admin\MovieController@add') }}" role="button" class="btn btn-primary">新規作成</a>
-            </div>
             <div class="col-md-8">
                 <form action="{{ action('Admin\MovieController@index') }}" method="get">
                     <div class="form-group row">
@@ -33,7 +30,7 @@
                         <thead>
                             <tr>
                                 <th width="10%">ID</th>
-                                <th width="50%">タイトル</th>
+                                <th width="40%">タイトル</th>
                                 <th width="40%">監督</th>
                             </tr>
                         </thead>
@@ -41,8 +38,8 @@
                             @foreach($movies as $movie)
                                 <tr>
                                     <th>{{ $movie->id }}</th>
-                                    <td>{{ str_limit($movie->title) }}</td>
-                                    <td>{{ str_limit($movie->director) }}</td>
+                                    <td>{{ $movie->title }}</td>
+                                    <td>{{ $movie->director }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\MovieController@edit', ['id' => $movie->id]) }}">編集</a>

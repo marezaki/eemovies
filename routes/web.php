@@ -17,9 +17,6 @@
 
 // 管理者サイド
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    Route::get('review/index', 'Admin\ReviewController@index');
-    Route::get('review/delete', 'Admin\ReviewController@delete');
-    Route::get('review/status', 'Admin\ReviewController@status');
 
     Route::get('movie/create', 'Admin\MovieController@add');
     Route::post('movie/create', 'Admin\MovieController@create');
