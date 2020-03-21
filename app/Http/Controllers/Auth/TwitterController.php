@@ -31,7 +31,7 @@ class TwitterController extends Controller
 
         $authUser = $this->findOrCreateUser($user);
         Auth::login($authUser, true);
-        return redirect('user/about');
+        return redirect('/user');
     }
 
     private function findOrCreateUser($twitterUser)
@@ -53,6 +53,6 @@ class TwitterController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect("/about");
+        return redirect("/");
     }
 }
