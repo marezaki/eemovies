@@ -11,6 +11,13 @@ class ReviewData extends Model
     public static $rules = array(
         'title' => 'required',
         'total' => 'required',
+        'happy' => 'required',
+        'excited' => 'required',
+        'funny' => 'required',
+        'sad' => 'required',
+        'disgusted' => 'required',
+        'scary' => 'required',
+        'body' => 'required',
     );
 
     public function user()

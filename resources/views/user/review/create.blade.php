@@ -23,6 +23,7 @@
             {{-- 投稿のタイトル --}}
             <div class="form-group">
                 <label class="tag">タイトル</label>
+                <p class="attention">20文字以内で入力してください</p>
                 <div class="title">
                     <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                 </div>
