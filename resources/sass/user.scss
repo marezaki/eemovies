@@ -89,21 +89,21 @@ body {
     color: rgb(65, 65, 65) !important;
 }
 
-.nav-link:before {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 1px;
-    background: rgb(226, 0, 0);
-    transition: 0.5s;
-}
+// .nav-link:before {
+//     position: absolute;
+//     top: 35px;
+//     left: 0;
+//     content: "";
+//     display: inline-block;
+//     width: 0;
+//     height: 1px;
+//     background: rgb(226, 0, 0);
+//     transition: 0.5s;
+// }
 
-.nav-link:hover:before {
-    width: 100%;
-}
+// .nav-link:hover:before {
+//     width: 100%;
+// }
 
 .nav-link:hover {
     color: rgb(207, 0, 0) !important;

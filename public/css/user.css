@@ -87,22 +87,6 @@ body {
   color: #414141 !important;
 }
 
-.nav-link:before {
-  position: absolute;
-  top: 35px;
-  left: 0;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 1px;
-  background: #e20000;
-  transition: 0.5s;
-}
-
-.nav-link:hover:before {
-  width: 100%;
-}
-
 .nav-link:hover {
   color: #cf0000 !important;
   transition: 0.3s;
