@@ -139,3 +139,64 @@ i {
   margin: 15px;
 }
 
+@media (max-width: 480px) {
+  .top-container {
+    width: 100%;
+    background-size: cover;
+  }
+
+  .top-container .content-wrapper {
+    width: 80%;
+  }
+
+  .top-container .content-wrapper .left-container {
+    top: 20%;
+  }
+
+  .top-container .content-wrapper .left-container .comment {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+  }
+
+  .top-container .content-wrapper .left-container span {
+    font-size: 1.4rem;
+  }
+
+  .top-container .content-wrapper .right-container {
+    margin-left: 0px;
+    top: 50%;
+  }
+
+  .top-container .content-wrapper .right-container .logo-image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .middle-container {
+    height: 770px;
+    width: 100%;
+  }
+
+  .middle-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .middle-container .far {
+    font-size: 4rem;
+  }
+
+  .middle-container .level {
+    font-size: 3rem;
+  }
+
+  .bottom-container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .bottom-container .evaluation-image {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+

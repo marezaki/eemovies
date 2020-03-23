@@ -7,10 +7,9 @@
     <div class="top-container">
         <div class="content-wrapper">
             <div class="left-container">
-                {{-- <img class="top-image" src="/storage/image/about/about.jpg"> --}}
-                <h3 class="comment one">みんなの<span>「感情」</span>から</h2>
-                <h3 class="comment two">あなたの<span>「気分」</span>にあった作品を</h2>
-                <h4 class="comment three">Emotional Evaluation</h4>
+                <h3 class="comment">みんなの<span>「感情」</span>から</h2>
+                <h3 class="comment">あなたの<span>「気分」</span>にあった作品を</h2>
+                <h4 class="comment">Emotional Evaluation</h4>
             </div>
             <div class="right-container">
                 <img class="logo-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo.png">
@@ -21,10 +20,10 @@
     <div class="middle-container">
         <div class="middle-wrapper">
             <div class="middle-content">
-                <h2>感情指数で評価しよう</h2>
+                <h2>感情指数で評価</h2>
                 <div class="middle-p">
-                    <p>喜び、怒り、悲しみ、楽しさ、笑い、怖さの6つの感情を最大9までで表現！</p>
-                    <p>あなたの今の気分にぴったりの作品をみんなのレビューから探しましょう！</p>
+                    <p>喜び、怒り、悲しみ、楽しさ、笑い、そして怖さの6つの感情を最大9までで表現</p>
+                    <p>あなたの今の気分にぴったりの作品をみんなのレビューから探して見ましょう</p>
                 </div>
                 <div class="emotional">
                     <i class="far fa-smile-beam"><label class="level">喜び度</label></i>
@@ -44,8 +43,8 @@
             <div class="bottom-content">
                 <h2>総合評価</h2>
                 <div class="bottom-p">
-                    <p>EE MOVIESでは「E評価」が最高評価です！</p>
-                    <p>あなたのお気に入りの作品を評価しましょう！</p>
+                    <p>EE MOVIESでは「E評価」が最高評価</p>
+                    <p>お気に入りの作品を評価しましょう</p>
                 </div>
                 <div class="evaluation">
                     <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/a-1015528_640.jpg">
