@@ -31,6 +31,7 @@
                 </div>
                 <label class="comment">任意で選択してください</label>
                 <select name="gender">
+                    <option></option>
                     <option>男性</option>
                     <option>女性</option>
                     <option>その他</option>
@@ -43,6 +44,7 @@
                 </div>
                 <label class="comment">任意で年齢層を選択してください</label>
                 <select name="age">
+                    <option></option>
                     <option>10</option>
                     <option>20</option>
                     <option>30</option>
