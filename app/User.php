@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public static $rules = array(
+        'name' => 'required',
+    );
+
     public function reviews()
     {
         return $this->hasMany('App\ReviewData');

@@ -60,11 +60,11 @@
                                     </a>
 
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ action('User\UserController@edit') }}">プロフィール編集</a>
                                         <a class="dropdown-item" href="{{ action('Auth\TwitterController@logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
                                         <form id="logout-form" action="{{ action('Auth\TwitterController@logout') }}"　style="display: none;">
                                             @csrf
                                         </form>
-                                        {{-- <a class="dropdown-item" href="{{ action('User\UserController@edit') }}">プロフィール編集</a> --}}
                                     </div>
                                 </li>
                             @endguest

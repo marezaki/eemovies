@@ -28,15 +28,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 // ユーザーサイド
 Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
+    Route::get('/', 'User\UserController@about');
     Route::get('review/create', 'User\ReviewController@add');
     Route::post('review/create', 'User\ReviewController@create');
     Route::get('review', 'User\ReviewController@index');
-    Route::get('myreview/delete', 'User\ReviewController@delete');
-    Route::get('myreview', 'User\ReviewController@mine');
     Route::get('review/status', 'User\ReviewController@status');
+    Route::get('myreview/delete', 'User\ReviewController@delete');
 
     Route::get('mypage', 'User\UserController@index');
-    Route::get('/', 'User\UserController@about');
+    Route::get('mypage/edit', 'User\UserController@edit');
+    Route::post('mypage/edit', 'User\UserController@update');
 
     Route::get('movie', 'User\MovieController@index');
     Route::get('movie/status', 'User\MovieController@status');
