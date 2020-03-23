@@ -1,0 +1,65 @@
+.main-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: auto;
+}
+
+.row-top {
+  margin-top: 110px;
+}
+
+h2 {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: solid 2px #c7c7c7;
+}
+
+.add {
+  text-align: center;
+  display: inline-block;
+  background-color: #414141;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 15px;
+  margin-top: 20px;
+  padding: 5 10px;
+  border-radius: 5px;
+}
+
+.add:hover {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(65, 65, 65, 0.801);
+  transition: 0.5s;
+}
+
+.card {
+  width: 16em;
+  margin: 40px 0;
+  box-shadow: 0 0 8px gray;
+  margin-left: 2.8rem;
+}
+
+.card-demand {
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+.card-delete {
+  text-align: center;
+  display: inline-block;
+  color: #d60000;
+  font-size: 0.8rem;
+  margin: 15 40px;
+  padding: 5px;
+  border: solid 1px #d60000;
+  border-radius: 5px;
+}
+
+.card-delete:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #d60000;
+  transition: 0.5s;
+}
+

@@ -93,7 +93,7 @@ i {
   padding: 5 10px;
   color: #d60000;
   font-size: 20px;
-  border: solid 2px #d60000;
+  border: solid 1px #d60000;
   border-radius: 5px;
 }
 
@@ -114,7 +114,8 @@ i {
   font-size: 1.2rem;
   width: 7.5rem;
   padding: 5 10px;
-  border: solid 3px #d60000;
+  border: solid 1px #d60000;
+  border-radius: 5px;
 }
 
 .delete-button:hover {

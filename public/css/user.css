@@ -36,7 +36,7 @@ body {
 }
 
 .menu {
-  color: #5a5a5a;
+  color: #414141;
   border-left: solid 1px #e20000;
   padding: 5px 20px;
   margin: 15px 0;
@@ -63,6 +63,7 @@ body {
 
 .menu:hover {
   color: #cc0000;
+  transition: 0.3s;
   text-decoration: none;
 }
 
@@ -83,7 +84,23 @@ body {
 }
 
 .nav-link {
-  color: #5a5a5a !important;
+  color: #414141 !important;
+}
+
+.nav-link:before {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background: #e20000;
+  transition: 0.5s;
+}
+
+.nav-link:hover:before {
+  width: 100%;
 }
 
 .nav-link:hover {

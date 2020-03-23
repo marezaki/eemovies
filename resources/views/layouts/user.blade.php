@@ -31,7 +31,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class="logo" href="{{ action('User\ReviewController@index') }}"><img src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png')}}" height=60px width=60px></a>
+                    <a class="logo" href="{{ action('User\UserController@about') }}"><img src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png')}}" height=60px width=60px></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -39,10 +39,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-                            <a class="menu" href="{{ action('User\UserController@about') }}">EE | MOVIESについて</a>
                             <a class="menu" href="{{ action('User\UserController@index') }}">マイページ</a>
                             <a class="menu" href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
                             <a class="menu" href="{{ action('User\MovieController@index') }}">作品を探す</a>
+                            <a class="menu" href="{{ action('User\DemandController@index') }}">リクエスト</a>
                         </ul>
                         
                         <!-- Right Side Of Navbar -->

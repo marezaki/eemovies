@@ -41,6 +41,11 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
 
     Route::get('movie', 'User\MovieController@index');
     Route::get('movie/status', 'User\MovieController@status');
+
+    Route::get('demand/create', 'User\DemandController@add');
+    Route::post('demand/create', 'User\DemandController@create');
+    Route::get('demands', 'User\DemandController@index');
+    Route::get('demand/delete', 'User\DemandController@delete');
 });
 
 // ゲストユーザー

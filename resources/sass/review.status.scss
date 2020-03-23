@@ -51,29 +51,29 @@ i {
     margin-left: 20px;
 }
 
-    .far.fa-smile-beam {
-        color: $happy;
-    }
+.far.fa-smile-beam {
+    color: $happy;
+}
 
-    .far.fa-grin-squint {
-        color: $excited;
-    }
+.far.fa-grin-squint {
+    color: $excited;
+}
 
-    .far.fa-grin-squint-tears {
-        color: $funny;
-    }
+.far.fa-grin-squint-tears {
+    color: $funny;
+}
 
-    .far.fa-sad-tear {
-        color: $sad;
-    }
+.far.fa-sad-tear {
+    color: $sad;
+}
 
-    .far.fa-angry {
-        color: $disgusted;
-    }
+.far.fa-angry {
+    color: $disgusted;
+}
 
-    .far.fa-flushed {
-        color: $scary;
-    }
+.far.fa-flushed {
+    color: $scary;
+}
 
 .level {
     font-size: 20px;
@@ -90,13 +90,12 @@ i {
     color: gray;
 }
 
-
 .status {
     display: inline-block;
     padding: 5 10px;
     color: rgb(214, 0, 0);
     font-size: 20px;
-    border: solid 2px rgb(214, 0, 0);
+    border: solid 1px rgb(214, 0, 0);
     border-radius: 5px;
 }
 
@@ -117,7 +116,8 @@ i {
     font-size: 1.2rem;
     width: 7.5rem;
     padding: 5 10px;
-    border: solid 3px rgb(214, 0, 0);
+    border: solid 1px rgb(214, 0, 0);
+    border-radius: 5px;
 }
 
 .delete-button:hover {
