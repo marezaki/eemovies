@@ -1,15 +1,14 @@
 @import "variables";
 
 .top-container {
-    background-image: url("https://eemovies.s3-ap-northeast-1.amazonaws.com/about/about.jpg");
+    background-image: url("https://eemovies.s3-ap-northeast-1.amazonaws.com/about/emotion.jpeg");
     background-size: cover;
     width: auto;
-    height: 600px;
+    height: 770px;
     margin: 0 auto;
 }
 
 .content-wrapper {
-    height: 550px;
     width: 60%;
     margin: 0 auto;
 }
@@ -17,13 +16,14 @@
 .left-container {
     position: absolute;
     top: 35%;
+    margin-left: 300px;
 }
 
 .comment {
-    color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
     font-size: 1.8rem;
-    border-left: solid 3px rgb(207, 0, 0);
-    padding-left: 10px;
+    border-left: solid 2px rgb(207, 0, 0);
+    padding-left: 20px;
     margin-bottom: 50px;
 }
 
@@ -31,44 +31,51 @@ span {
     font-size: 2.2rem;
 }
 
-.right-container {
-    position: absolute;
-    top: 35%;
-    margin-left: 550px;
-}
-
 .logo-image {
-    height: 15rem;
-    width: 15rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .middle-container {
     background-color: rgb(255, 255, 255);
-    height: 500px;
+    height: 440px;
 }
 
 .middle-wrapper {
     width: 80%;
     margin: 0 auto;
-}
-
-.middle-content {
     background-color: white;
     margin-top: 100px;
-    text-align: center;
 }
 
-.middle-content h2 {
-    font-size: 2rem;
-    color: rgb(32, 32, 32);
-    border-bottom: solid 2px rgb(192, 192, 192);
-    padding-bottom: 10px;
+.middle-left-container {
+    h2 {
+        font-size: 2rem;
+        color: rgb(22, 22, 22);
+        padding-bottom: 10px;
+        border-bottom: solid 1px rgb(22, 22, 22);
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        color: rgb(22, 22, 22);
+        margin-top: 60px;
+    }
+
+    .emotional-box {
+        margin-top: 20px;
+    }
 }
 
-.middle-p {
-    margin-top: 20px;
-    font-size: 1rem;
-    color: gray;
+.middle-right-container {
+    position: absolute;
+    top: 127%;
+    margin-left: 660px;
+    .emotional-image {
+        height: 270px;
+        width: 480px;
+    }
 }
 
 .bottom-container {
@@ -79,24 +86,27 @@ span {
 .bottom-wrapper {
     width: 80%;
     margin: 0 auto;
-}
-
-.bottom-content {
     background-color: white;
+    margin-top: 100px;
+}
+
+.bottom-container {
     text-align: center;
+    h2 {
+        font-size: 2rem;
+        color: rgb(22, 22, 22);
+        padding-bottom: 10px;
+        border-bottom: solid 1px rgb(22, 22, 22);
+    }
+    p {
+        font-size: 1rem;
+        color: rgb(22, 22, 22);
+        margin-top: 60px;
+    }
 }
 
-.bottom-content h2 {
-    font-size: 2rem;
-    color: rgb(32, 32, 32);
-    border-bottom: solid 2px rgb(192, 192, 192);
-    padding-bottom: 10px;
-}
-
-.bottom-p {
-    margin-top: 20px;
-    font-size: 1rem;
-    color: gray;
+.evaluation {
+    text-align: center;
 }
 
 .evaluation-image {
@@ -105,7 +115,7 @@ span {
 }
 
 i {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .far.fa-smile-beam {
@@ -133,11 +143,11 @@ i {
 }
 
 .emotional {
-    margin: 20px;
+    margin: 20 0px;
 }
 
 .level {
-    font-size: 40px;
+    font-size: 30px;
     margin: 15px;
 }
 
@@ -145,51 +155,75 @@ i {
     .top-container {
         width: 100%;
         background-size: cover;
+        height: 500px;
 
         .content-wrapper {
             width: 80%;
             .left-container {
-                top: 20%;
+                top: 35%;
+                margin-left: 10px;
                 .comment {
-                    font-size: 1.2rem;
-                    margin-bottom: 60px;
+                    font-size: 1rem;
+                    margin-bottom: 30px;
                 }
                 span {
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                 }
-            }
-
-            .right-container {
-                margin-left: 0px;
-                top: 50%;
                 .logo-image {
-                    width: 10rem;
-                    height: 10rem;
+                    height: 80px;
+                    width: 80px;
                 }
             }
         }
     }
 
     .middle-container {
-        height: 770px;
+        height: 900px;
+    }
+
+    .middle-left-container {
         width: 100%;
         h2 {
             font-size: 1.8rem;
+            text-align: center;
         }
-        .far {
-            font-size: 4rem;
+        p {
+            margin-top: 250px;
         }
-        .level {
-            font-size: 3rem;
+        .emotional-box {
+            text-align: center;
+            .far {
+                margin: 0;
+                font-size: 4rem;
+                margin-top: 10px;
+            }
+            .level {
+                font-size: 3rem;
+                margin: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .middle-right-container {
+        margin-left: 0;
+        top: 85%;
+        .emotional-image {
+            height: 200px;
+            width: 300px;
         }
     }
 
     .bottom-container {
         width: 100%;
-        height: 400px;
+        height: 500px;
         .evaluation-image {
             width: 6rem;
             height: 6rem;
+        }
+        p {
+            margin-top: 20px;
+            text-align: left;
         }
     }
 }
