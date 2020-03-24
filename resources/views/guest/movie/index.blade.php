@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('layouts.user')
 <link href="{{ asset('css/movie.css') }}" rel="stylesheet">
 
 @section('title', '作品一覧')

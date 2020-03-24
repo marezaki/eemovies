@@ -31,7 +31,7 @@ class TwitterController extends Controller
 
         $authUser = $this->findOrCreateUser($user);
         Auth::login($authUser, true);
-        return redirect('/user');
+        return redirect('/');
     }
 
     private function findOrCreateUser($twitterUser)

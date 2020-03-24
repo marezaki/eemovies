@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('layouts.user')
 <link href="{{ asset('css/review.css') }}" rel="stylesheet">
 
 @section('title', '投稿一覧')

@@ -31,7 +31,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
-                    <a class="logo" href="{{ action('User\UserController@about') }}"><img src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png')}}" height=60px width=60px></a>
+                    <a class="logo" href="{{ action('Guest\GuestController@about') }}"><img src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png')}}" height=60px width=60px></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -39,10 +39,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
+                            @guest
+                                <a class="menu" href="{{ action('Guest\GuestController@about') }}">EE | MOVIESについて</a>
+                                <a class="menu" href="{{ action('Guest\ReviewController@index') }}">みんなのレビュー</a>
+                                <a class="menu" href="{{ action('Guest\MovieController@index') }}">作品を探す</a>
+                            @else
                             <a class="menu" href="{{ action('User\UserController@index') }}">マイページ</a>
-                            <a class="menu" href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
-                            <a class="menu" href="{{ action('User\MovieController@index') }}">作品を探す</a>
-                            <a class="menu" href="{{ action('User\DemandController@index') }}">リクエスト</a>
+                                <a class="menu" href="{{ action('User\ReviewController@index') }}">みんなのレビュー</a>
+                                <a class="menu" href="{{ action('User\MovieController@index') }}">作品を探す</a>
+                                <a class="menu" href="{{ action('User\DemandController@index') }}">リクエスト</a>
+                            @endguest
                         </ul>
                         
                         <!-- Right Side Of Navbar -->
@@ -52,23 +58,22 @@
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                         @guest
                             <li><a class="nav-link" href="/auth/twitter">Twitterで登録 / ログイン</a></li>
-                            {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}<span class="caret"></span>
-                                    </a>
+                        {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}<span class="caret"></span>
+                                </a>
 
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ action('User\UserController@edit') }}">プロフィール編集</a>
-                                        <a class="dropdown-item" href="{{ action('Auth\TwitterController@logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
-                                        <form id="logout-form" action="{{ action('Auth\TwitterController@logout') }}"　style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ action('User\UserController@edit') }}">プロフィール編集</a>
+                                    <a class="dropdown-item" href="{{ action('Auth\TwitterController@logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+                                    <form id="logout-form" action="{{ action('Auth\TwitterController@logout') }}"　style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                         </ul>
                     </div>
                 </div>
