@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Demand;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class DemandController extends Controller
 {
@@ -29,8 +31,8 @@ class DemandController extends Controller
 
     public function index()
     {
-        $demands = null;
-        $demands = Demand::all();
+        $user_id = Auth::user()->id;
+        $demands = User::find($user_id)->demands;
 
         return view('user.demand.index', ['demands' => $demands]);
     }

@@ -18,6 +18,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\ReviewData');
     }
+
+    public function demands()
+    {
+        return $this->hasMany('App\Demand');
+    }
     /**
      * The attributes that are mass assignable.
      *
