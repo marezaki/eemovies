@@ -20,7 +20,7 @@ h2 {
     margin: 30px auto;
 }
 
-i {
+.fa-twitter {
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
 }
@@ -37,7 +37,7 @@ i {
 
 .login-button:hover {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.781);
+    color: rgb(255, 255, 255);
     background-color: rgb(33, 128, 218);
     transition: 0.5s;
 }
