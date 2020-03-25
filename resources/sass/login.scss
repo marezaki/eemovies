@@ -20,10 +20,15 @@ h2 {
     margin: 30px auto;
 }
 
+i {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
 .login-button {
     display: inline-block;
     text-align: center;
-    background-color: rgb(71, 181, 255);
+    background-color: rgb(37, 150, 255);
     color: white;
     padding: 10 30px;
     max-width: 400px;
@@ -33,6 +38,6 @@ h2 {
 .login-button:hover {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.781);
-    background-color: rgba(71, 181, 255, 0.801);
+    background-color: rgb(33, 128, 218);
     transition: 0.5s;
 }

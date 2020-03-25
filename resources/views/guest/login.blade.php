@@ -6,10 +6,10 @@
 @section('content')
     <div class="main-container">
         <div class="row-top">
-            <h2>ログインフォーム</h2>
+            <h2>ログイン</h2>
         </div>
     </div>
     <div class="login-form">
-        <a  class="login-button" href="/auth/twitter">Twitterで登録 / ログインする！</a>
+        <a  class="login-button" href="/auth/twitter"><i class="fab fa-twitter"></i> Twitterで登録 / ログインする！</a>
     </div>
 @endsection

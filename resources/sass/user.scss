@@ -85,28 +85,20 @@ body {
     color: #fff !important;
 }
 
-.nav-link {
-    color: rgb(65, 65, 65) !important;
+i {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
 }
 
-// .nav-link:before {
-//     position: absolute;
-//     top: 35px;
-//     left: 0;
-//     content: "";
-//     display: inline-block;
-//     width: 0;
-//     height: 1px;
-//     background: rgb(226, 0, 0);
-//     transition: 0.5s;
-// }
-
-// .nav-link:hover:before {
-//     width: 100%;
-// }
+.nav-link {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(37, 150, 255);
+    border-radius: 10px;
+    padding: 12px 0;
+}
 
 .nav-link:hover {
-    color: rgb(207, 0, 0) !important;
+    background-color: rgb(29, 122, 209) !important;
     transition: 0.3s;
 }
 

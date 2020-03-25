@@ -13,7 +13,7 @@ class TwitterController extends Controller
 
     public function add()
     {
-        return view('user.twitter.login');
+        return view('guest.login');
     }
 
     public function redirectToProvider()
