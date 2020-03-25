@@ -58,29 +58,29 @@ h2 {
     // margin: 5 2px;
 }
 
-    .far.fa-smile-beam {
-        color: $happy;
-    }
+.far.fa-smile-beam {
+    color: $happy;
+}
 
-    .far.fa-grin-squint {
-        color: $excited;
-    }
+.far.fa-grin-squint {
+    color: $excited;
+}
 
-    .far.fa-grin-squint-tears {
-        color: $funny;
-    }
+.far.fa-grin-squint-tears {
+    color: $funny;
+}
 
-    .far.fa-sad-tear {
-        color: $sad;
-    }
+.far.fa-sad-tear {
+    color: $sad;
+}
 
-    .far.fa-angry {
-        color: $disgusted;
-    }
+.far.fa-angry {
+    color: $disgusted;
+}
 
-    .far.fa-flushed {
-        color: $scary;
-    }
+.far.fa-flushed {
+    color: $scary;
+}
 
 .card-title {
     font-size: 15px;
@@ -101,6 +101,29 @@ h2 {
     border: solid 2px rgb(211, 0, 0);
 }
 
-.card-user {
+p.card-user {
     color: gray;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+
+        .card-movie {
+            font-size: 1.2rem;
+        }
+
+        .card-image {
+            width: auto;
+            height: 200px;
+        }
+
+        .evaluation {
+            height: 60px;
+            width: 60px;
+        }
+    }
 }

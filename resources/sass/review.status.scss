@@ -126,3 +126,15 @@ i {
     background-color: rgb(214, 0, 0);
     transition: 0.5s;
 }
+
+@media (max-width: 480px) {
+    .level {
+        margin: 0 30px;
+        font-size: 2rem;
+    }
+
+    .number {
+        margin: 0;
+        margin-right: 30px;
+    }
+}

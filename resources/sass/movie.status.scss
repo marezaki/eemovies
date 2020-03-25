@@ -161,4 +161,37 @@ h2 {
 
 .card-user {
     color: gray;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2rem;
+    }
+    .movie-image {
+        height: auto;
+        max-width: 300px;
+        width: auto;
+    }
+    .evaluation-content h2 {
+        font-size: 1.2rem;
+    }
+    .card {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+
+        .card-movie {
+            font-size: 1.2rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+        }
+
+        .evaluation {
+            height: 60px;
+            width: 60px;
+        }
+    }
 }
