@@ -6,10 +6,10 @@
 @section('content')
     <div class="top-container">
         <div class="content-wrapper">
-            <div class="left-container">
-                <h3 class="comment">みんなの<span>「感情」</span>から</h2>
-                <h3 class="comment">あなたの<span>「気分」</span>にあった作品を</h2>
-                <h4 class="comment">Emotional Evaluation　<img class="logo-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png"></h4>
+            <div class="js-trigger left-container">
+                <h3 class="fade-elem comment">みんなの<span>「感情」</span>から</h2>
+                <h3 class="fade-elem comment">あなたの<span>「気分」</span>にあった作品を</h2>
+                <h3 class="fade-elem comment">Emotional Evaluation　<img class="logo-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png"></h4>
             </div>
         </div>
     </div>
@@ -17,9 +17,9 @@
     <div class="middle-container">
         <div class="middle-wrapper">
             <div class="middle-left-container">
-                <h2>Emotional Evaluation</h2>
-                <h3>6つの感情で評価</h3>
-                <p>
+                <h2 class="js-trigger fade-type-scale">Emotional Evaluation</h2>
+                <h3 class="js-trigger fade-type-scale">6つの感情で評価</h3>
+                <p class="js-trigger fade-elem">
                     喜び、怒り、悲しみ、楽しさ、笑い、怖さの6つの感情を
                     <br>
                     0から9までの数値で表現
@@ -29,7 +29,7 @@
                     あなたの今の気分にぴったりの作品を探してみましょう！
                 </p>
             </div>
-            <div class="middle-right-container">
+            <div class="middle-right-container js-trigger fade-type-scale">
                 <div class="emotional-box">
                     <div class="emotional">
                         <i class="far fa-smile-beam"><label class="level">喜び度</label></i>
@@ -49,15 +49,15 @@
     <div class="bottom-container">
         <div class="bottom-wrapper">
             <div class="bottom-container">
-                <h2>Give Your Rating</h2>
-                <p>
+                <h2 class="js-trigger fade-type-scale">Give Your Rating</h2>
+                <p class="js-trigger fade-elem">
                     EE MOVIESでは「E評価」が最高評価です
                     <br>
                     思い出の作品やお気に入りの作品はありますか？
                     <br>
                     作品のページから評価してみましょう！
                 </p>
-                <div class="evaluation">
+                <div class="js-trigger fade-elem evaluation">
                     <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/a-1015528_640.jpg">
                     <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/b-1015529_640.jpg">
                     <img class="evaluation-image" src="https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/c-1015531_640.jpg">

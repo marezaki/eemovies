@@ -49316,6 +49316,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./move */ "./resources/js/move.js");
+
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
  * The following block of code may be used to automatically register your
@@ -49327,7 +49329,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component("example-component", __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49335,7 +49337,7 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: "#app"
 });
 
 /***/ }),
@@ -49451,6 +49453,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/move.js":
+/*!******************************!*\
+  !*** ./resources/js/move.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(function () {
+  $(window).scroll(function () {
+    var fadeTrigger = $(".js-trigger");
+    $(fadeTrigger).each(function () {
+      var scroll = $(window).scrollTop(),
+          elemTop = $(this).offset().top,
+          windowHeight = $(window).height();
+
+      if (scroll > elemTop - windowHeight / 2) {
+        $(this).addClass("fade-scale");
+      }
+
+      if (scroll > elemTop - windowHeight / 2) {
+        $(this).find(".fade-elem").addClass("fade-up");
+      }
+
+      if (scroll > elemTop - windowHeight / 2) {
+        if ($(this).hasClass("multi-trigger")) {
+          $(this).find(".fade-elem").addClass("fade-up-down");
+        } else if ($(this).hasClass("fade-type-up") || $(this).hasClass("fade-type-down")) {
+          $(this).addClass("fade-up-down");
+        } else if ($(this).hasClass("fade-type-left") || $(this).hasClass("fade-type-right")) {
+          $(this).addClass("fade-left-right");
+        }
+      }
+    });
+  });
+  $(window).trigger("scroll");
+});
 
 /***/ }),
 

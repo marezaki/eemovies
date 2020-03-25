@@ -4,7 +4,6 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\ReviewData;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,7 +29,6 @@ class UserController extends Controller
         // ユーザー編集
         $user_name = Auth::user()->name;
         $user_id = Auth::user()->id;
-        // \Debugbar::info($user_id);
         if (empty($user_name)) {
             abort(404);
         }
