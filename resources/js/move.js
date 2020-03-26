@@ -7,16 +7,10 @@ $(function() {
                 windowHeight = $(window).height();
 
             if (scroll > elemTop - windowHeight / 2) {
-                $(this).addClass("fade-scale");
-            }
-
-            if (scroll > elemTop - windowHeight / 2) {
                 $(this)
+                    .addClass("fade-scale")
                     .find(".fade-elem")
                     .addClass("fade-up");
-            }
-
-            if (scroll > elemTop - windowHeight / 2) {
                 if ($(this).hasClass("multi-trigger")) {
                     $(this)
                         .find(".fade-elem")

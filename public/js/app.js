@@ -49472,14 +49472,8 @@ $(function () {
           windowHeight = $(window).height();
 
       if (scroll > elemTop - windowHeight / 2) {
-        $(this).addClass("fade-scale");
-      }
+        $(this).addClass("fade-scale").find(".fade-elem").addClass("fade-up");
 
-      if (scroll > elemTop - windowHeight / 2) {
-        $(this).find(".fade-elem").addClass("fade-up");
-      }
-
-      if (scroll > elemTop - windowHeight / 2) {
         if ($(this).hasClass("multi-trigger")) {
           $(this).find(".fade-elem").addClass("fade-up-down");
         } else if ($(this).hasClass("fade-type-up") || $(this).hasClass("fade-type-down")) {
