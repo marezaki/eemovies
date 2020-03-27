@@ -6,18 +6,17 @@
   margin: 0 auto;
 }
 
-.content-wrapper {
+.top-container .top-wrapper {
   width: 60%;
   margin: 0 auto;
 }
 
-.left-container {
-  position: absolute;
-  top: 35%;
-  margin-left: 300px;
+.top-container .top-wrapper .top-content {
+  padding-left: 300px;
+  padding-top: 300px;
 }
 
-.comment {
+.top-container .top-wrapper .top-content .comment {
   color: #222222;
   font-size: 1.8rem;
   border-left: solid 2px #cf0000;
@@ -25,31 +24,28 @@
   margin-bottom: 50px;
 }
 
-span {
+.top-container .top-wrapper .top-content span {
   font-size: 2.2rem;
 }
 
-.logo-image {
+.top-container .top-wrapper .top-content .logo-image {
   height: 5rem;
   width: 5rem;
 }
 
 .middle-container {
-  background-color: white;
   height: 400px;
 }
 
-.middle-wrapper {
+.middle-container .middle-wrapper {
   width: 80%;
   margin: 0 auto;
   background-color: white;
   margin-top: 100px;
 }
 
-.middle-left-container h2 {
+.middle-container .middle-wrapper h2 {
   font-size: 2rem;
-  color: #161616;
-  padding-bottom: 10px;
   color: #fff;
   background-color: #3f3f3f;
   padding: 10px 0;
@@ -58,25 +54,71 @@ span {
   text-align: center;
 }
 
-.middle-left-container h3 {
+.middle-container .middle-left-content {
+  display: inline-block;
+  height: 300px;
+  width: 500px;
   margin-top: 60px;
+}
+
+.middle-container .middle-left-content h3 {
+  color: #161616;
   font-size: 2.5rem;
 }
 
-.middle-left-container p {
+.middle-container .middle-left-content p {
   font-size: 1.2rem;
   color: #161616;
   margin-top: 40px;
 }
 
-.middle-right-container {
-  position: absolute;
-  top: 127%;
-  margin-left: 550px;
+.middle-container .middle-right-content {
+  display: inline-block;
+  height: 300px;
+  width: 560px;
+  margin-top: 60px;
+  margin-left: 50px;
 }
 
-.middle-right-container .emotional-box {
+.middle-container .middle-right-content .emotional-box {
   margin-top: 60px;
+}
+
+.middle-container .middle-right-content .emotional-box i {
+  font-size: 4rem;
+}
+
+.middle-container .middle-right-content .emotional-box .far.fa-smile-beam {
+  color: #ec7e7e;
+}
+
+.middle-container .middle-right-content .emotional-box .far.fa-grin-squint {
+  color: #ffc476;
+}
+
+.middle-container .middle-right-content .emotional-box .far.fa-grin-squint-tears {
+  color: #c7eb65;
+}
+
+.middle-container .middle-right-content .emotional-box .far.fa-sad-tear {
+  color: #72caec;
+}
+
+.middle-container .middle-right-content .emotional-box .far.fa-angry {
+  color: #ad90dd;
+}
+
+.middle-container .middle-right-content .emotional-box .far.fa-flushed {
+  color: #6b6b6b;
+}
+
+.middle-container .middle-right-content .emotional-box .emotional {
+  margin: 20 0px;
+}
+
+.middle-container .middle-right-content .emotional-box .level {
+  font-size: 30px;
+  margin: 15px;
 }
 
 .bottom-container {
@@ -84,20 +126,16 @@ span {
   height: 600px;
 }
 
-.bottom-wrapper {
+.bottom-container .bottom-wrapper {
   width: 80%;
   margin: 0 auto;
   background-color: white;
   margin-top: 100px;
 }
 
-.bottom-container {
+.bottom-container .bottom-wrapper h2 {
   text-align: center;
-}
-
-.bottom-container h2 {
   font-size: 2rem;
-  color: #161616;
   padding-bottom: 10px;
   color: #fff;
   background-color: #3f3f3f;
@@ -106,161 +144,126 @@ span {
   padding: 10px 0;
 }
 
-.bottom-container p {
+.bottom-container .bottom-content {
+  text-align: center;
+}
+
+.bottom-container .bottom-content p {
   font-size: 1.2rem;
   color: #161616;
   margin-top: 30px;
 }
 
-.evaluation {
+.bottom-container .evaluation {
   text-align: center;
 }
 
-.evaluation-image {
+.bottom-container .evaluation-image {
   height: 10rem;
   width: 10rem;
 }
 
-i {
-  font-size: 4rem;
-}
-
-.far.fa-smile-beam {
-  color: #ec7e7e;
-}
-
-.far.fa-grin-squint {
-  color: #ffc476;
-}
-
-.far.fa-grin-squint-tears {
-  color: #c7eb65;
-}
-
-.far.fa-sad-tear {
-  color: #72caec;
-}
-
-.far.fa-angry {
-  color: #ad90dd;
-}
-
-.far.fa-flushed {
-  color: #6b6b6b;
-}
-
-.emotional {
-  margin: 20 0px;
-}
-
-.level {
-  font-size: 30px;
-  margin: 15px;
-}
-
 @media (max-width: 480px) {
   .top-container {
-    width: 100%;
-    background-size: cover;
-    height: 500px;
+    height: 600px;
   }
 
-  .top-container .content-wrapper {
+  .top-container .top-wrapper {
     width: 80%;
   }
 
-  .top-container .content-wrapper .left-container {
-    top: 35%;
-    margin-left: 10px;
+  .top-container .top-wrapper .top-content {
+    padding: 0;
+    padding-top: 200px;
   }
 
-  .top-container .content-wrapper .left-container .comment {
-    font-size: 1rem;
-    margin-bottom: 30px;
+  .top-container .top-wrapper .top-content .comment {
+    font-size: 1.4rem;
   }
 
-  .top-container .content-wrapper .left-container span {
-    font-size: 1.2rem;
+  .top-container .top-wrapper .top-content span {
+    font-size: 1.6rem;
   }
 
-  .top-container .content-wrapper .left-container .logo-image {
-    height: 80px;
-    width: 80px;
+  .top-container .top-wrapper .top-content .logo-image {
+    margin-top: 10px;
   }
 
   .middle-container {
-    height: 900px;
-  }
-
-  .middle-left-container {
-    width: 100%;
-  }
-
-  .middle-left-container h2 {
-    font-size: 1.4rem;
-    text-align: center;
-    width: 300px;
-  }
-
-  .middle-left-container h3 {
-    font-size: 2.3rem;
-  }
-
-  .middle-left-container p {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-
-  .middle-right-container {
-    margin-left: 0;
-    top: 135%;
-  }
-
-  .middle-right-container .emotional-box {
-    text-align: center;
-    margin-top: 0;
-  }
-
-  .middle-right-container .emotional-box .far {
-    margin: 0;
-    font-size: 4rem;
-    margin-top: 20px;
-  }
-
-  .middle-right-container .emotional-box .level {
-    font-size: 3rem;
-    margin: 0;
-    margin-left: 10px;
-    margin-right: 40px;
-  }
-
-  .middle-right-container .emotional-box .emotional {
-    margin: 0;
-  }
-
-  .bottom-container {
-    width: 100%;
     height: 500px;
   }
 
-  .bottom-container .evaluation-image {
-    width: 6rem;
-    height: 6rem;
+  .middle-container .middle-wrapper h2 {
+    width: 300px;
+    font-size: 1.3rem;
   }
 
-  .bottom-container h2 {
-    font-size: 1.4rem;
+  .middle-container .middle-wrapper .middle-left-content {
+    height: auto;
+    width: 300px;
+    margin-top: 30px;
+  }
+
+  .middle-container .middle-wrapper .middle-left-content h3 {
+    font-size: 2rem;
     text-align: center;
+  }
+
+  .middle-container .middle-wrapper .middle-left-content p {
+    margin-top: 20px;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content {
+    height: auto;
+    width: 300px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box {
+    margin-top: 15px;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box i {
+    font-size: 2rem;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box .emotional {
+    width: 150px;
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box .level {
+    font-size: 30px;
+    margin: 10 10px;
+  }
+
+  .bottom-container {
+    height: 600px;
+  }
+
+  .bottom-container .bottom-wrapper {
+    margin-top: 100px;
+  }
+
+  .bottom-container .bottom-wrapper h2 {
+    font-size: 1.2rem;
     width: 300px;
   }
 
-  .bottom-container h3 {
-    font-size: 2.3rem;
+  .bottom-container .bottom-wrapper .bottom-content p {
+    text-align: left;
   }
 
-  .bottom-container p {
-    margin-top: 20px;
-    text-align: left;
+  .bottom-container .bottom-wrapper .bottom-content .evaluation {
+    text-align: center;
+  }
+
+  .bottom-container .bottom-wrapper .bottom-content .evaluation-image {
+    height: 6rem;
+    width: 6rem;
   }
 }
 
