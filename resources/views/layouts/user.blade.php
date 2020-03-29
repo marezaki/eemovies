@@ -25,6 +25,9 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/user.css') }}" rel="stylesheet">
 
+        {{-- ファビコン --}}
+        <link rel="shortcut icon" href="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/logo/logo_red.png') }}">
+
     </head>
     <body>
         <div id="app">
