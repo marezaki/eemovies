@@ -30,6 +30,8 @@ h2 {
 .card-image {
   width: auto;
   height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-movie {

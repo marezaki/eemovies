@@ -34,6 +34,8 @@ h2 {
 .card-img-top {
   width: auto;
   height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card-title {
