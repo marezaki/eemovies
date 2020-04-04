@@ -122,7 +122,7 @@
 
 .bottom-container {
     background-color: rgb(255, 255, 255);
-    height: 600px;
+    height: 500px;
 
     .bottom-wrapper {
         width: 80%;
@@ -157,6 +157,103 @@
     .evaluation-image {
         height: 10rem;
         width: 10rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .top-container {
+        height: 600px;
+        .top-wrapper {
+            width: 80%;
+            .top-content {
+                padding-left: 200px;
+                padding-top: 200px;
+                .comment {
+                    font-size: 1.4rem;
+                }
+                span {
+                    font-size: 1.6rem;
+                }
+                .logo-image {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .middle-container {
+        height: 350px;
+        text-align: center;
+        .middle-wrapper {
+            h2 {
+                width: 300px;
+                font-size: 1.3rem;
+            }
+            .middle-left-content {
+                height: auto;
+                width: 300px;
+                margin-top: 30px;
+                text-align: left;
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    margin-top: 20px;
+                }
+            }
+            .middle-right-content {
+                height: auto;
+                width: 300px;
+                margin-top: 0px;
+                margin-left: 0px;
+                text-align: center;
+
+                .emotional-box {
+                    margin-top: 15px;
+
+                    i {
+                        font-size: 2rem;
+                        margin-top: 30px;
+                    }
+                    .emotional {
+                        width: 150px;
+                        display: inline-block;
+                        float: left;
+                        margin: 0;
+                    }
+                    .level {
+                        font-size: 30px;
+                        margin: 10 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-container {
+        height: 400px;
+        .bottom-wrapper {
+            margin-top: 100px;
+            h2 {
+                font-size: 1.2rem;
+                width: 300px;
+            }
+
+            .bottom-content {
+                p {
+                    text-align: center;
+                }
+
+                .evaluation {
+                    text-align: center;
+                }
+
+                .evaluation-image {
+                    height: 6rem;
+                    width: 6rem;
+                }
+            }
+        }
     }
 }
 
@@ -205,6 +302,7 @@
                 width: 300px;
                 margin-top: 0px;
                 margin-left: 0px;
+                text-align: center;
 
                 .emotional-box {
                     margin-top: 15px;

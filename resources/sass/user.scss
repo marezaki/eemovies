@@ -49,7 +49,7 @@ body {
 
 .menu:before {
     position: absolute;
-    top: 35px;
+    top: 34px;
     left: 0;
     content: "";
     display: inline-block;
@@ -69,15 +69,27 @@ body {
     text-decoration: none;
 }
 
-// @media screen and (max-width: 1023px) and (min-width: 768px) {
-//     .navbar-dark .navbar-toggler {
-//         display: block;
-//         position: relative;
-//         width: 1.75rem;
-//         height: 1.5rem;
-//         border-color: rgb(221, 0, 0) !important;
-//     }
-// }
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .container {
+        font-size: 12px;
+    }
+
+    .menu {
+        font-size: 12px;
+    }
+
+    .menu:before {
+        position: absolute;
+        top: 28px;
+        left: 0;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 1px;
+        background: rgb(226, 0, 0);
+        transition: 0.5s;
+    }
+}
 
 .footer {
     width: 100%;

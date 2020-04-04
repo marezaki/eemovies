@@ -123,7 +123,7 @@
 
 .bottom-container {
   background-color: white;
-  height: 600px;
+  height: 500px;
 }
 
 .bottom-container .bottom-wrapper {
@@ -161,6 +161,113 @@
 .bottom-container .evaluation-image {
   height: 10rem;
   width: 10rem;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .top-container {
+    height: 600px;
+  }
+
+  .top-container .top-wrapper {
+    width: 80%;
+  }
+
+  .top-container .top-wrapper .top-content {
+    padding-left: 200px;
+    padding-top: 200px;
+  }
+
+  .top-container .top-wrapper .top-content .comment {
+    font-size: 1.4rem;
+  }
+
+  .top-container .top-wrapper .top-content span {
+    font-size: 1.6rem;
+  }
+
+  .top-container .top-wrapper .top-content .logo-image {
+    margin-top: 10px;
+  }
+
+  .middle-container {
+    height: 350px;
+    text-align: center;
+  }
+
+  .middle-container .middle-wrapper h2 {
+    width: 300px;
+    font-size: 1.3rem;
+  }
+
+  .middle-container .middle-wrapper .middle-left-content {
+    height: auto;
+    width: 300px;
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .middle-container .middle-wrapper .middle-left-content h3 {
+    font-size: 2rem;
+  }
+
+  .middle-container .middle-wrapper .middle-left-content p {
+    margin-top: 20px;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content {
+    height: auto;
+    width: 300px;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box {
+    margin-top: 15px;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box i {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box .emotional {
+    width: 150px;
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+
+  .middle-container .middle-wrapper .middle-right-content .emotional-box .level {
+    font-size: 30px;
+    margin: 10 10px;
+  }
+
+  .bottom-container {
+    height: 400px;
+  }
+
+  .bottom-container .bottom-wrapper {
+    margin-top: 100px;
+  }
+
+  .bottom-container .bottom-wrapper h2 {
+    font-size: 1.2rem;
+    width: 300px;
+  }
+
+  .bottom-container .bottom-wrapper .bottom-content p {
+    text-align: center;
+  }
+
+  .bottom-container .bottom-wrapper .bottom-content .evaluation {
+    text-align: center;
+  }
+
+  .bottom-container .bottom-wrapper .bottom-content .evaluation-image {
+    height: 6rem;
+    width: 6rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -218,6 +325,7 @@
     width: 300px;
     margin-top: 0px;
     margin-left: 0px;
+    text-align: center;
   }
 
   .middle-container .middle-wrapper .middle-right-content .emotional-box {
