@@ -15,7 +15,7 @@ class ReviewController extends Controller
         if ($cond_title != '') {
             $reviews = ReviewData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
         } else {
-            $reviews = ReviewData::all();
+            $reviews = ReviewData::all()->sortByDesc('updated_at');
         }
 
         return view('guest.review.index', ['reviews' => $reviews, 'cond_title' => $cond_title]);

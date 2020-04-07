@@ -54,7 +54,8 @@ Route::get('review', 'Guest\ReviewController@index');
 Route::get('review/status', 'Guest\ReviewController@status');
 Route::get('movie', 'Guest\MovieController@index');
 Route::get('movie/status', 'Guest\MovieController@status');
-Route::get('twitter/login', 'Guest\GuestController@login');
+Route::get('user/login', 'Guest\GuestController@login');
+Route::get('user/register', 'Guest\GuestController@register');
 
 // Twitter API OAuth認証
 // ログインURL

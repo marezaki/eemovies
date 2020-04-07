@@ -92,7 +92,7 @@
                                         <i class="far fa-flushed">{{ $review->scary }}</i>
                                     </div>
                                     @if ($review->spoilers == 1)
-                                        <p class="spoilers">ネタバレ有り</p>
+                                        <p class="spoilers">ネタバレ！</p>
                                     @endif
                                     <a class="card-title" href="{{ action('Guest\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
                                     <p class="card-user">{{ $review->user->name }}</p>

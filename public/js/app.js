@@ -49632,6 +49632,17 @@ $(function () {
 
 /***/ }),
 
+/***/ "./resources/sass/user.create.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/user.create.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/user.scss":
 /*!**********************************!*\
   !*** ./resources/sass/user.scss ***!
@@ -49644,9 +49655,9 @@ $(function () {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/user.scss ./resources/sass/about.scss ./resources/sass/review.scss ./resources/sass/mypage.scss ./resources/sass/mypage.edit.scss ./resources/sass/movie.scss ./resources/sass/movie.status.scss ./resources/sass/review.create.scss ./resources/sass/review.status.scss ./resources/sass/demand.scss ./resources/sass/demand.create.scss ./resources/sass/login.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/admin.scss ./resources/sass/user.scss ./resources/sass/about.scss ./resources/sass/review.scss ./resources/sass/mypage.scss ./resources/sass/mypage.edit.scss ./resources/sass/movie.scss ./resources/sass/movie.status.scss ./resources/sass/review.create.scss ./resources/sass/review.status.scss ./resources/sass/demand.scss ./resources/sass/demand.create.scss ./resources/sass/login.scss ./resources/sass/user.create.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49664,7 +49675,8 @@ __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/review.status.scss */"./resources/sass/review.status.scss");
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/demand.scss */"./resources/sass/demand.scss");
 __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/demand.create.scss */"./resources/sass/demand.create.scss");
-module.exports = __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/login.scss */"./resources/sass/login.scss");
+module.exports = __webpack_require__(/*! /Users/mare_1120/Documents/portfolio/eemovies/resources/sass/user.create.scss */"./resources/sass/user.create.scss");
 
 
 /***/ })

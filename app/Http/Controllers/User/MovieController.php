@@ -16,7 +16,7 @@ class MovieController extends Controller
         if ($cond_title != null) {
             $movies = MovieData::whereRaw('title LIKE ?', "%" . $cond_title . "%")->get();
         } else {
-            $movies = MovieData::all();
+            $movies = MovieData::all()->sortByDesc('updated_at');;
         }
 
         return view('user.movie.index', ['movies' => $movies, 'cond_title' => $cond_title]);

@@ -1,11 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.user')
+<link href="{{ asset('css/user.create.css') }}" rel="stylesheet">
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">メッセージ</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +15,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    ログインに成功しました！
                 </div>
             </div>
         </div>

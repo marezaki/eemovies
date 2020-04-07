@@ -16,14 +16,14 @@ h2 {
 
 .add {
   text-align: center;
-  display: inline-block;
+  display: block;
   background-color: #414141;
   color: #fff;
   font-size: 1.2rem;
-  margin: 0 15px;
+  margin: 0 20px;
   margin-top: 20px;
   padding: 5 10px;
-  border-radius: 5px;
+  max-width: 300px;
 }
 
 .add:hover {
@@ -38,6 +38,7 @@ h2 {
   margin: 40px 0;
   box-shadow: 0 0 8px gray;
   margin-left: 2.8rem;
+  border: none !important;
 }
 
 .card-demand {
@@ -53,7 +54,6 @@ h2 {
   margin: 15 40px;
   padding: 5px;
   border: solid 1px #d60000;
-  border-radius: 5px;
 }
 
 .card-delete:hover {

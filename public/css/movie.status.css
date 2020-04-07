@@ -61,14 +61,14 @@ h2 {
 }
 
 .create {
-  display: inline-block;
-  padding: 5 10px;
+  display: block;
+  padding: 10 20px;
   border: solid 1px #d30000;
   color: #d30000;
-  border-radius: 5px;
   font-size: 20px;
   margin-bottom: 30px;
-  border-radius: 5px;
+  text-align: center;
+  max-width: 300px;
 }
 
 .create:hover {

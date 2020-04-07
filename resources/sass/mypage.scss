@@ -21,6 +21,7 @@ h2 {
     margin: 40px 0;
     box-shadow: 0 0 8px gray;
     margin-left: 2.8rem;
+    border: none !important;
 }
 
 .card-image {
@@ -93,6 +94,7 @@ h2 {
     width: 115px;
     color: rgb(211, 0, 0);
     border: solid 2px rgb(211, 0, 0);
+    text-align: center;
 }
 
 .card-user {

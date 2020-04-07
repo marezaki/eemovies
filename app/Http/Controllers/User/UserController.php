@@ -13,7 +13,7 @@ class UserController extends Controller
     {
         // 自分の投稿一覧
         $user_id = Auth::user()->id;
-        $reviews = User::find($user_id)->reviews;
+        $reviews = User::find($user_id)->reviews->sortByDesc('updated_at');
 
         return view('user.mypage.index', ['reviews' => $reviews]);
     }

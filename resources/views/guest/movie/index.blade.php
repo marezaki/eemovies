@@ -9,7 +9,7 @@
             <h2>作品を探す</h2>
         </div>
         <div class="serch-box">
-            <form action="{{ action('User\MovieController@index') }}" method="get">
+            <form action="{{ action('Guest\MovieController@index') }}" method="get">
                 <div class="serch-comment">作品タイトルを検索する</div>
                 <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                 {{ csrf_field() }}

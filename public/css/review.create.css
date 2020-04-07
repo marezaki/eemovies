@@ -92,9 +92,8 @@ select {
   font-size: 15px;
   margin-top: 30px;
   padding: 10 60px;
-  border: solid 2px #d30000;
+  border: solid 1px #d30000;
   color: #d30000;
-  border-radius: 5px;
 }
 
 .button:hover {

@@ -18,25 +18,50 @@ h2 {
   margin: 30px auto;
 }
 
-.fa-twitter {
-  color: white;
-  font-size: 1.5rem;
+.login-form p {
+  font-size: 1.4rem;
 }
 
-.login-button {
-  display: inline-block;
+.login-form ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.login-button.twitter {
+  display: block;
   text-align: center;
   background-color: #2596ff;
   color: white;
   padding: 10 30px;
   max-width: 400px;
-  border-radius: 5px;
+}
+
+.login-button.twitter .fa-twitter {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.login-button.twitter:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #81c2ff;
+  transition: 0.5s;
+}
+
+.login-button {
+  display: block;
+  text-align: center;
+  background-color: #d45a51;
+  color: white;
+  padding: 10 30px;
+  max-width: 400px;
+  margin-top: 20px;
 }
 
 .login-button:hover {
   text-decoration: none;
   color: white;
-  background-color: #2180da;
+  background-color: #fc9d96;
   transition: 0.5s;
 }
 

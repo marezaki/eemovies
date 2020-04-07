@@ -32,7 +32,7 @@ class DemandController extends Controller
     public function index()
     {
         $user_id = Auth::user()->id;
-        $demands = User::find($user_id)->demands;
+        $demands = User::find($user_id)->demands->sortByDesc('updated_at');;
 
         return view('user.demand.index', ['demands' => $demands]);
     }

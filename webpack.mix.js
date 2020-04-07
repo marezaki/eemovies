@@ -25,4 +25,5 @@ mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/review.status.scss", "public/css")
     .sass("resources/sass/demand.scss", "public/css")
     .sass("resources/sass/demand.create.scss", "public/css")
-    .sass("resources/sass/login.scss", "public/css");
+    .sass("resources/sass/login.scss", "public/css")
+    .sass("resources/sass/user.create.scss", "public/css");

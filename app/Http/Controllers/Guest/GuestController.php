@@ -18,4 +18,10 @@ class GuestController extends Controller
         // このサイトについての説明画面
         return view('guest.login');
     }
+
+    public function register()
+    {
+        // このサイトについての説明画面
+        return view('guest.register');
+    }
 }

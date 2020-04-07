@@ -13,5 +13,6 @@
     "/css/review.status.css": "/css/review.status.css",
     "/css/demand.css": "/css/demand.css",
     "/css/demand.create.css": "/css/demand.create.css",
-    "/css/login.css": "/css/login.css"
+    "/css/login.css": "/css/login.css",
+    "/css/user.create.css": "/css/user.create.css"
 }

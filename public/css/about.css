@@ -52,6 +52,7 @@
   width: 550px;
   margin: 0 auto;
   text-align: center;
+  box-shadow: 0 0 8px gray;
 }
 
 .middle-container .middle-left-content {
@@ -142,6 +143,7 @@
   margin: 0 auto;
   width: 550px;
   padding: 10px 0;
+  box-shadow: 0 0 8px gray;
 }
 
 .bottom-container .bottom-content {
