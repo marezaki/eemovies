@@ -86,6 +86,8 @@
                 </div>
 
                 <a class="status" href="{{ action('Guest\MovieController@status', ['id' => $review->movie_id])}}">この作品の詳細を見る</a>
+
+                <p class="favorite"><i class="far fa-thumbs-up"></i> {{ $count_favorite }}</p>
             </form>
         </div>
     </div>

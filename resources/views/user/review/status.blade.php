@@ -86,6 +86,12 @@
                 </div>
 
                 <a class="status" href="{{ action('User\MovieController@status', ['id' => $review->movie_id])}}">この作品の詳細を見る</a>
+
+                @if (Auth::user()->is_favorite($review->id))
+                    <a class="favorite" href="{{ action('FavoriteController@destroy') }}?id={{ $review->id }}"><i class="fas fa-thumbs-up"></i> {{ $count_favorite }}</a>
+                @else
+                    <a class="favorite" href="{{ action('FavoriteController@store') }}?id={{ $review->id }}"><i class="far fa-thumbs-up"></i> {{ $count_favorite }}</a>
+                @endif
                 
                 @if ($review->user->id == $user_id) 
                     <div class="form-group">

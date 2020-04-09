@@ -10,8 +10,8 @@
 
 h2 {
   width: 100%;
-  padding: 10px 0;
-  border-bottom: solid 2px #c7c7c7;
+  padding: 10px 20px;
+  border-left: solid 6px #da0101;
 }
 
 .serch-box {
@@ -22,7 +22,7 @@ h2 {
 
 .card {
   width: 16em;
-  margin: 40px 0;
+  margin: 24px 0;
   box-shadow: 0 0 8px gray;
   margin-left: 2.8rem;
   border: none !important;
@@ -46,16 +46,14 @@ h2 {
 }
 
 .evaluation {
+  display: block;
   height: 80px;
   width: 80px;
 }
 
-.card-i-1 {
+.card-i {
   font-size: 32px;
-}
-
-.card-i-2 {
-  font-size: 32px;
+  text-align: center;
 }
 
 .far.fa-smile-beam {
@@ -96,9 +94,26 @@ h2 {
   font-size: 15px;
   text-align: center;
   padding: 0 10px;
-  width: 115px;
+  margin-bottom: 10px;
+  width: 110px;
   color: #d30000;
-  border: solid 2px #d30000;
+  border: solid 1px #d30000;
+}
+
+.favorite {
+  display: inline-block;
+  color: #d30000;
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+
+.favorite i {
+  font-size: 1.6rem;
+}
+
+.favorite:hover {
+  text-decoration: none;
+  color: rgba(211, 0, 0, 0.76);
 }
 
 p.card-user {
@@ -110,11 +125,15 @@ p.card-user {
   .card {
     width: 100%;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .card .card-movie {
     font-size: 1.2rem;
+  }
+
+  .card .card-i {
+    text-align: left;
   }
 
   .card .card-image {

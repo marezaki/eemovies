@@ -25,7 +25,9 @@ class MovieController extends Controller
     public function status(Request $request)
     {
         $movie = MovieData::find($request->id);
+        // $movie_id = $movie->id;
         $reviews = ReviewData::all();
+        // $reviews = MovieData::find($movie_id)->reviews();
 
         return view('user.movie.status', ['movie' => $movie, 'reviews' => $reviews]);
     }

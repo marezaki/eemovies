@@ -10,8 +10,8 @@
 
 h2 {
   width: 100%;
-  padding: 10px 0;
-  border-bottom: solid 2px #c7c7c7;
+  padding: 10px 20px;
+  border-left: solid 6px #da0101;
 }
 
 .serch-box {
@@ -26,7 +26,7 @@ h2 {
 
 .card {
   width: 16em;
-  margin: 40px 0;
+  margin: 24px 0;
   box-shadow: 0 0 8px gray;
   margin-left: 2.8rem;
   border: none !important;

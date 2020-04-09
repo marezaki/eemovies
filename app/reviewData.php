@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class ReviewData extends Model
 {
@@ -28,5 +29,10 @@ class ReviewData extends Model
     public function movie()
     {
         return $this->belongsTo('App\MovieData');
+    }
+
+    public function favorite_users()
+    {
+        return $this->belongsToMany(User::class, 'favorites', 'review_id', 'user_id')->withTimestamps();
     }
 }

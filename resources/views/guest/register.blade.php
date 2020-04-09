@@ -11,9 +11,9 @@
         <div class="login-form">
             <p>ユーザー登録するとできること</p>
             <ul>
-                <li><i class="fas fa-check"></i>　レビューの投稿</li>
+                <li><i class="fas fa-check"></i>　映画レビューの投稿</li>
                 <li><i class="fas fa-check"></i>　映画のリクエストの送信</li>
-                {{-- <li><i class="fas fa-check"></i>　気に入った投稿のお気に入り追加</li> --}}
+                <li><i class="fas fa-check"></i>　投稿にいいねをつける</li>
             </ul>
             <a  class="login-button twitter" href="/auth/twitter"><i class="fab fa-twitter"></i> Twitterで新規登録</a>
             <a  class="login-button" href="/register">Twitterアカウントをお持ちでない方</a>

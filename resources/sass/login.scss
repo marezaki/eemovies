@@ -11,12 +11,11 @@
 
 h2 {
     width: 100%;
-    padding: 10px 0;
-    border-bottom: solid 2px $border;
+    padding: 10px 20px;
+    border-left: solid 6px $border;
 }
 
 .login-form {
-    width: 80%;
     margin: 30px auto;
     p {
         font-size: 1.4rem;

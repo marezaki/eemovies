@@ -62,6 +62,7 @@ class ReviewController extends Controller
     // 他人のレビュー詳細画面
     $review = ReviewData::find($request->id);
     $user_id = Auth::user()->id;
-    return view('user/review/status', ['review' => $review, 'user_id' => $user_id]);
+    $count_favorite = $review->favorite_users()->count();
+    return view('user/review/status', ['review' => $review, 'user_id' => $user_id, 'count_favorite' => $count_favorite]);
   }
 }

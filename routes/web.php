@@ -46,6 +46,9 @@ Route::group(['prefix' => 'user', 'middleware' => 'auth'], function () {
     Route::post('demand/create', 'User\DemandController@create');
     Route::get('demands', 'User\DemandController@index');
     Route::get('demand/delete', 'User\DemandController@delete');
+
+    Route::get('favorite', 'FavoriteController@store')->name('favorites.favorite');
+    Route::get('unfavorite', 'FavoriteController@destroy')->name('favorites.unfavorite');
 });
 
 // ゲストユーザー

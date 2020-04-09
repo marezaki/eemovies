@@ -23,9 +23,4 @@ class MovieData extends Model
     {
         return $this->hasMany('App\ReviewData');
     }
-
-    // public function movies()
-    // {
-    //     return $this->hasMany('App\MovieData');
-    // }
 }

@@ -22,6 +22,12 @@
                         <img class="movie-image" src="{{ $movie->image_path }}">
                     </div>
                 </div>
+                {{-- <div class="form-group">
+                    <label class="tag" for="average">みんなの評価</label>
+                    <div class="average">
+                        
+                    </div>
+                </div> --}}
                 <div class="form-group">
                     <label class="tag" for="director">監督</label>
                     <div class="director">
@@ -82,12 +88,12 @@
                                     @elseif ($review->total == 5)
                                         <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/e-1015533_640.jpg' )}}"></p>
                                     @endif
-                                    <div class="card-i-1">
+                                    <div class="card-i">
                                         <i class="far fa-smile-beam">{{ $review->happy }}</i>
                                         <i class="far fa-grin-squint">{{ $review->excited }}</i>
                                         <i class="far fa-grin-squint-tears">{{ $review->funny }}</i>
                                     </div>
-                                    <div class="card-i-2">
+                                    <div class="card-i">
                                         <i class="far fa-sad-tear">{{ $review->sad }}</i>
                                         <i class="far fa-angry">{{ $review->disgusted }}</i>
                                         <i class="far fa-flushed">{{ $review->scary }}</i>
@@ -97,6 +103,12 @@
                                     @endif
                                     <a class="card-title" href="{{ action('User\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
                                     <p class="card-user">{{ $review->user->name }}</p>
+
+                                    @if (Auth::user()->is_favorite($review->id))
+                                        <a class="favorite" href="{{ action('FavoriteController@destroy') }}?id={{ $review->id }}"><i class="fas fa-thumbs-up"></i> {{ $review->favorite_users->count() }}</a>
+                                    @else
+                                        <a class="favorite" href="{{ action('FavoriteController@store') }}?id={{ $review->id }}"><i class="far fa-thumbs-up"></i> {{ $review->favorite_users->count() }}</a>
+                                    @endif
                                 </div>
                             </div>
                         @endif

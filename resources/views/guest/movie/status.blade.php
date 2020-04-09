@@ -81,12 +81,12 @@
                                     @elseif ($review->total == 5)
                                         <p><img class="evaluation" src="{{ asset('https://eemovies.s3-ap-northeast-1.amazonaws.com/evaluation/e-1015533_640.jpg' )}}"></p>
                                     @endif
-                                    <div class="card-i-1">
+                                    <div class="card-i">
                                         <i class="far fa-smile-beam">{{ $review->happy }}</i>
                                         <i class="far fa-grin-squint">{{ $review->excited }}</i>
                                         <i class="far fa-grin-squint-tears">{{ $review->funny }}</i>
                                     </div>
-                                    <div class="card-i-2">
+                                    <div class="card-i">
                                         <i class="far fa-sad-tear">{{ $review->sad }}</i>
                                         <i class="far fa-angry">{{ $review->disgusted }}</i>
                                         <i class="far fa-flushed">{{ $review->scary }}</i>
@@ -96,6 +96,8 @@
                                     @endif
                                     <a class="card-title" href="{{ action('Guest\ReviewController@status', ['id' => $review->id]) }}">{{ $review->title }}</a>
                                     <p class="card-user">{{ $review->user->name }}</p>
+
+                                    <p class="favorite"><i class="far fa-thumbs-up"></i> {{ $review->favorite_users->count() }}</p>
                                 </div>
                             </div>
                         @endif
